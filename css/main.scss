@@ -9,3 +9,27 @@
 @import "base/fonts";
 @import "base/typography";
 @import "base/base";
+@import "components/radio";
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.covervid-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fhWrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.fhWrapper > div {
+  width: 100%;
+}

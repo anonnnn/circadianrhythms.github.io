@@ -1,0 +1,19 @@
+---
+layout: radio
+class: radio
+---
+
+
+{% for post in site.radio %}
+<div class="radioShow">
+
+  <div class="radioShow__artwork">
+    <img src="{{ post.artwork }}" />
+<iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/259496774&amp;color=ff5500&amp;inverse=true&amp;auto_play=false&amp;show_user=true"></iframe>
+    <div class="radiowShow__title"></div>
+  </div>
+
+  <div class="radioBg" style="background-image: url({{post.artworkGif}})">
+    <div class="perf"></div>
+</div>
+{% endfor %}

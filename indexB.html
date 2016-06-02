@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+
+
+<div class="covervid-wrapper">
+  <video class="covervid-video vid vid-1" preload="auto" poster="assets/images/video_poster.jpg" loop>
+    <source src="assets/video/1b.mp4" type='video/mp4'>
+  </video>
+  <video class="covervid-video vid vid-2" preload="auto" poster="assets/images/video_poster.jpg" loop>
+    <source src="assets/video/2b.mp4" type='video/mp4'>
+  </video>
+  <video class="covervid-video vid vid-3" preload="auto" poster="assets/images/video_poster.jpg" loop>
+    <source src="assets/video/3b.mp4" type='video/mp4'>
+  </video>
+  <video class="covervid-video vid vid-4" preload="auto" poster="assets/images/video_poster.jpg" loop>
+    <source src="assets/video/4.mp4" type='video/mp4'>
+  </video>
+</div>
+
+<div class="vidImgs">
+  <img src="assets/video/1-poster.jpg" width="100" data-vid="1">
+  <img src="assets/video/2-poster.jpg" width="100" data-vid="2">
+  <img src="assets/video/3-poster.jpg" width="100" data-vid="3">
+  <img src="assets/video/4-poster.png" width="100" data-vid="4">
+</div>
+
+
+<div class="logo">
+  <a href="/">
+    <img src="assets/images/cr_logo_mark_white.png" />
+  </a>
+</div>
+
+<div class="perf"></div>
+
+<script src="js/moodboard.js"></script>
+<script>
+var winWidth = $(window).width();
+var winHeight = $(window).height();
+  $(document).ready(function (){
+
+    $('.vidImgs img').click(function(){
+      $('.vid').each(function(e){
+        var video = $(this).get(0);
+        if (!video.paused) {
+          video.pause();
+          $(this).hide();
+        }
+      });
+      var vid = $(this).data('vid');
+      $('.vid-'+vid).show();
+      $('.vid-'+vid).get(0).play();
+    });
+
+    new Moodboard('.vidImgs img', {
+      coverage: 0.2, // roughly how much of the space to cover with photos
+      variation: 0.2, // how much variation should there be between image sizes
+      resizeDelay: 300, // in miliseconds, how long to wait before repositioning photos when the browser window resizes
+      disableResize: false // whether to stop repositioning images when the browser window resizes
+    });
+
+    $(window).on('click', 'img', function(e){
+
+      // Moodboard.randomNumber(0, layout.height - height);
+      var w = $(e.target).width();
+      var h = $(e.target).height();
+
+      $('img').each(function(e){
+         var x = Moodboard.randomNumber(0, winWidth - w);
+        var y = Moodboard.randomNumber(0, winHeight - h);
+        var ran = Math.floor(Math.random() * 14) + 1;
+        $(this).css('left', x + 'px');
+        $(this).css('top', y + 'px');
+        // $(this).attr('src', moodSrc[ran]);
+      });
+    });
+  });
+</script>

@@ -11,4 +11,39 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js'></script>
+  <script src="http://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      $('#dlbtn').click(function() {
+        $(this).fadeOut();
+        $('.perf').removeClass("perf-flash");
+        $('.title2').fadeOut();
+        $('.fhForm').fadeIn();
+      });
+
+      $('.flashButton').hover(function() {
+        $(this).toggleClass("flashButton-inverse");
+      }, function() {
+        $(this).toggleClass("flashButton-inverse");
+      });
+
+      $('#dlbtn').hover(function() {
+        $('.perf').addClass("perf-flash");
+      }, function() {
+        $('.perf').removeClass("perf-flash");
+      });
+
+      $(window).scroll(function() {
+        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+          $(window).scrollTop(0)
+        }
+        // $('.title2').fadeOut();
+        // // $.data(this, 'scrollTimer', setTimeout(function() {
+        // //     // do something
+        // //     $('.title2').fadeIn();
+        // // }, 1000));
+      });
+    });
+  </script>
 </head>

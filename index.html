@@ -7,8 +7,9 @@ layout: fadedHearing
 <div class="covervid-wrapper">
     <video class="covervid-video" poster="assets/images/video_poster.jpg" autoplay loop>
         <!-- <source src="videos/video.webm" type="vi/webm"> -->
-        <!-- <source src="https://s3.amazonaws.com/circadianrythms/CR_FH_low.mp4" type='video/mp4'> -->
-        <source src="assets/video/test.mp4" type='video/mp4'>
+        <source src="https://s3.amazonaws.com/circadianrythms/CR_FH7_low.mp4" type='video/mp4'>
+
+        <!-- <source src="assets/video/CR_FH7-lo.mp4" type='video/mp4'> -->
         <!-- <source src="http://ak7.picdn.net/shutterstock/videos/15780487/preview/stock-footage-high-quality-animation-of-an-abstract-motion-background-using-ink-elements.mp4
 " type='video/mp4'> -->
         <!-- <source src="http://ak3.picdn.net/shutterstock/videos/4965893/preview/stock-footage-beautiful-dense-cloud-isolated-on-black-background-with-alpha-channel-ready-fo-compositing.mp4
@@ -18,12 +19,42 @@ layout: fadedHearing
 
 <div class="fhWrapper flex items-center">
   <div>
-    <div class="title">
-      <h1 class="mb1">BLACKWAX</h1>
-      <img src="assets/images/titleWhite.svg" />
+    <div class="title title2 flex items-center justify-center flex-column">
+      <img src="assets/images/titleWhite3.svg" />
+      <a id="dlbtn" class="fhForm__button flashButton inline">
+        <!-- <img src="assets/images/downloadButton.svg" /> -->
+        DOWNLOAD
+      </a>
     </div>
 
-    <div class="content pb4">
+    <div class="fhForm">
+        <div class="flex items-center justify-center flex-column" style="height: 100%;">
+          <div class="fmForm__wrapper">
+            <div class="fhForm__label">
+              Enter your email address to download Faded Hearing by Blackwax
+            </div>
+            <div class="fhForm__formContainer">
+              <input class="fhForm__input" type="text" placeholder="Your email address">
+              <button id="dlNow" class="fhForm__button flashButton">Continue</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="fhContent">
+        <div class="flex items-center justify-center flex-column" style="height: 100%;">
+          <div class="fmForm__wrapper">
+              <a class="btn fhForm__button flashButton mb1">
+                DOWNLOAD MP3
+              </a>
+              <a class="btn fhForm__button flashButton">
+                SOUNDCLOUD
+              </a>
+          </div>
+        </div>
+    </div>
+
+    <!-- <div class="content pb4">
       <div class="form">
         <form action="">
           <input type="email" placeholder="Your email address"/>
@@ -31,7 +62,7 @@ layout: fadedHearing
           <input type="submit" value="Download MP3"/>
         </form>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 

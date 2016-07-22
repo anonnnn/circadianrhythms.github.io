@@ -22,16 +22,15 @@
         $('.fhForm').fadeIn();
       });
 
+      $('#dlNow').click(function() {
+        $('.fhForm').fadeOut();
+        $('.fhContent').fadeIn();
+      });
+
       $('.flashButton').hover(function() {
         $(this).toggleClass("flashButton-inverse");
       }, function() {
         $(this).toggleClass("flashButton-inverse");
-      });
-
-      $('#dlbtn').hover(function() {
-        $('.perf').addClass("perf-flash");
-      }, function() {
-        $('.perf').removeClass("perf-flash");
       });
 
       $(window).scroll(function() {

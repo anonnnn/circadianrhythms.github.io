@@ -12,6 +12,15 @@
 @import "components/radio";
 @import "components/vidImgs";
 
+.home-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('/assets/images/cr_logo_mark_white.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 7%;
+}
+
 body,
 html {
   width: 100%;

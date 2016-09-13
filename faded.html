@@ -29,15 +29,20 @@ layout: fadedHearing
 
     <div class="fhForm">
         <div class="flex items-center justify-center flex-column" style="height: 100%;">
-          <div class="fmForm__wrapper">
-            <div class="fhForm__label">
-              Enter your email address to download Faded Hearing by Blackwax
+          <form id="FHform" class="magic-form">
+            <!-- <input type="hidden" name="_redirect" value="http://localhost:4000/faded" /> -->
+            <div class="fmForm__wrapper">
+              <div class="fhForm__label">
+                Enter your email address to download Faded Hearing by Blackwax
+              </div>
+              <div class="fhForm__label fhForm__error center">
+              </div>
+              <div class="fhForm__formContainer">
+                <input name="emailAddress" class="fhForm__input" type="text" placeholder="Your email address">
+                <button id="dlNow" class="fhForm__button flashButton">DOWNLOAD NOW</button>
+              </div>
             </div>
-            <div class="fhForm__formContainer">
-              <input class="fhForm__input" type="text" placeholder="Your email address">
-              <button id="dlNow" class="fhForm__button flashButton">Continue</button>
-            </div>
-          </div>
+          </form>
         </div>
     </div>
 
@@ -47,8 +52,14 @@ layout: fadedHearing
               <a class="btn fhForm__button flashButton mb1">
                 DOWNLOAD MP3
               </a>
-              <a class="btn fhForm__button flashButton">
-                SOUNDCLOUD
+              <a class="btn fhForm__button flashButton mb1">
+                LISTEN ON SOUNDCLOUD
+              </a>
+              <a class="btn fhForm__button flashButton mb1">
+                LISTEN ON iTUNES
+              </a>
+              <a class="btn fhForm__button flashButton ">
+                LISTEN ON SPOTIFY
               </a>
           </div>
         </div>

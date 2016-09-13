@@ -261,3 +261,13 @@ html {
   padding: 0 50px;
   display: block;
 }
+
+.fhForm__error {
+  color: red;
+}
+
+.fhForm__input.error {
+  -webkit-box-shadow: inset 0px 0px 0px 1px red;
+  -moz-box-shadow: inset 0px 0px 0px 1px red;
+  box-shadow: inset 0px 0px 0px 1px red;
+}

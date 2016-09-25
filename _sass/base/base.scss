@@ -277,3 +277,20 @@ html {
   -moz-box-shadow: inset 0px 0px 0px 1px red;
   box-shadow: inset 0px 0px 0px 1px red;
 }
+
+.covervid-video {
+  display: none;
+}
+
+.covervid-wrapper {
+  background-image: url('/assets/images/video_poster.jpg');
+  background-size: cover;
+}
+
+@media only screen
+  and (min-width: 600px) {
+    .covervid-video {
+      display: block;
+    }
+
+}

@@ -8,8 +8,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@cr_label">
   <meta name="twitter:creator" content="@cr_label">
-  <meta name="twitter:title" content="Faded Hearing by Blackwax">
-  <meta name="twitter:description" content="Circadian Rhythms - LDN based concept label. CR001 Toasty - Metal coming soon.">
+  <meta name="twitter:title" content="Blackwax - Faded Hearing">
+  <meta name="twitter:description" content="Download. Circadian Rhythms - LDN based concept label. CR001 Toasty - Metal coming soon.">
   <meta name="twitter:image" content="http://circadian-rhythms.com/assets/images/twitterFH.png">
 
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
@@ -47,6 +47,7 @@
 
       $('#dlbtn').click(function() {
         $(this).fadeOut();
+        $('.soundcloudEmbed').fadeOut();
         $('.perf').removeClass("perf-flash");
         $('.titleText').fadeOut();
         $('.fhForm').fadeIn();

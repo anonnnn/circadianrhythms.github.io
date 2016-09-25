@@ -25,6 +25,7 @@ html {
 
 .title {
   width: 95%;
+  height: 100%;
   position: relative;
   z-index: 1;
   margin: 2.5%;
@@ -55,8 +56,6 @@ html {
 }
 
 .title2 a {
-  display: block;
-  width: 95%;
   margin-top: 20px;
   cursor: pointer;
 }
@@ -230,6 +229,14 @@ html {
   text-transform: uppercase;
 }
 
+.fhForm__buttonBorder {
+  border: solid 1px #fff !important;
+  background: none !important;
+  color: #fff !important;
+  width: auto;
+  padding: 0 50px;
+}
+
 .fhForm__input {
   background: none;
   color: #fff;
@@ -251,9 +258,8 @@ html {
   width: 60% !important;
 }
 
-#dlbtn.fhForm__button {
-  width: auto;
-  padding: 0 50px;
+.content .btn {
+  width: 100%;
 }
 
 .btn {

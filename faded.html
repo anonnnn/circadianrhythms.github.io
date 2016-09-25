@@ -5,7 +5,7 @@ layout: fadedHearing
 
 
 <div class="covervid-wrapper">
-    <video class="covervid-video" poster="assets/images/video_poster.jpg" autoplay loop>
+    <video class="covervid-video" id="vid" poster="assets/images/video_poster.jpg" autoplay loop playsinline webkit-playsinline>
         <!-- <source src="videos/video.webm" type="vi/webm"> -->
         <source src="https://s3.amazonaws.com/circadianrythms/CR_FH7_low.mp4" type='video/mp4'>
 
@@ -19,12 +19,14 @@ layout: fadedHearing
 
 <div class="fhWrapper flex items-center">
   <div>
-    <div class="title title2 flex items-center justify-center flex-column">
-      <img src="assets/images/titleWhite3.svg" />
-      <a id="dlbtn" class="fhForm__button flashButton inline">
-        <!-- <img src="assets/images/downloadButton.svg" /> -->
-        DOWNLOAD
-      </a>
+    <div class="title flex items-center justify-center flex-column">
+      <img class="titleText" src="assets/images/titleWhite3.svg" />
+      <div class="sm-col sm-col-12 md-col-4 ">
+        <a id="dlbtn" class="btn mb1 fhForm__button flashButton content">
+          DOWNLOAD
+        </a>
+        <iframe class="md-hide lg-hide mt2" width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/281777113&amp;color=ff5500&amp;inverse=true&amp;auto_play=false&amp;show_user=true"></iframe>
+      </div>
     </div>
 
     <div class="fhForm">

@@ -285,13 +285,15 @@ html {
 }
 
 .covervid-wrapper {
-  background-image: url('/assets/images/video_poster.jpg');
+  background-image: url('/assets/images/mobilebg.png');
   background-size: cover;
 }
 
 @media only screen
   and (min-width: 600px) {
     .covervid-video {
+      background-image: none;
+      background-color: black;
       display: block;
     }
 }

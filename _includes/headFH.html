@@ -101,6 +101,18 @@
         $('.covervid-video').get(0).play();
         $(this).fadeOut();
     	});
+
+      $('body').on('click', '.vol', function(e) {
+        console.log('hi')
+    		e.preventDefault();
+        if ($('.vol').hasClass('vol-on')) {
+          $('.vol').removeClass('vol-on').addClass('vol-off');
+          $("#vid").prop('muted', true);
+        } else {
+          $('.vol').removeClass('vol-off').addClass('vol-on');
+          $("#vid").prop('muted', false);
+        }
+    	});
     });
   </script>
 </head>

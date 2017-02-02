@@ -6,9 +6,16 @@
   <title>Circadian Rhythms</title>
   <meta name="description" content="LDN based concept label">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@cr_label">
+  <meta name="twitter:creator" content="@cr_label">
+  <meta name="twitter:title" content="Circadian Rhythms">
+  <meta name="twitter:description" content="LDN based concept label. CR001 Toasty - Metal coming soon.">
+  <meta name="twitter:image" content="http://circadian-rhythms.com/assets/images/twitterCard.png">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons//apple-icon-60x60.png">
@@ -24,11 +31,16 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/icons//favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons//favicon-16x16.png">
 
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js'></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
+
+
   <script type="text/javascript">
     !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
     analytics.load("mxfsHa6zN9dYKHIx6WNDr32FeukkdNTW");
     analytics.page()
     }}();
   </script>
+
 </head>

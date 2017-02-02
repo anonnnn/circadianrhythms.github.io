@@ -1,0 +1,8 @@
+body {
+  color: #272F71;
+  font-weight: bold;
+}
+
+.f1, .f2, .f3, .f4 {
+  font-weight: bolder;
+}

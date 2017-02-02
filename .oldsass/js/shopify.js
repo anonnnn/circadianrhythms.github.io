@@ -1,9 +1,7 @@
-
-module.exports = function () {
-  $(function() {
+$(function() {
   var client = ShopifyBuy.buildClient({
-    apiKey: '0ca3df7d8bc98f977650e10d5dcd1274',
-    domain: 'circadianrhythms.myshopify.com',
+    apiKey: '91d9b09d1042009110e3260f838f0bde',
+    myShopifyDomain: 'goodyearsldn',
     appId: '6'
   });
 
@@ -25,11 +23,10 @@ module.exports = function () {
   }
 
 
-    var ids = [];
-    var selectedVariants = [];
+  var ids = [];
+  var selectedVariants = [];
 
   $('.buy-button').each(function(){
-    console.log('hiii')
     var id = $(this).attr('data-id');
     ids.push(id);
   }).promise().done( function(){
@@ -46,8 +43,14 @@ module.exports = function () {
 
         var variantSelectors = generateSelectors(products[index]);
         $('.variant-selectors').html(variantSelectors);
+
+        // updateProductTitle(products[index].title);
+        // updateVariantTitle(selectedVariant);
+        // updateVariantPrice(selectedVariant);
         attachBuyButtonListeners(products[index]);
         attachOnVariantSelectListeners(products[index]);
+        // updateCartTabButton();
+        // attachCheckoutButtonListeners();
       }
     });
     attachQuantityIncrementListeners();
@@ -213,7 +216,7 @@ function attachOnVariantSelectListeners(product) {
   ============================================================ */
   function addVariantToCart(variant, quantity) {
     openCart();
-    cart.createLineItemsFromVariants({ variant: variant, quantity: quantity }).then(function() {
+    cart.addVariants({ variant: variant, quantity: quantity }).then(function() {
       renderCartItems();
     }).catch(function (errors) {
       console.log('Fail');
@@ -275,7 +278,6 @@ function attachOnVariantSelectListeners(product) {
   ============================================================
   ============================================================ */
   function attachBuyButtonListeners(product) {
-    console.log(product)
     var el = document.getElementById(product.id);
     $(el).on('click', function (event) {
       event.preventDefault();
@@ -283,12 +285,6 @@ function attachOnVariantSelectListeners(product) {
       addVariantToCart(product.selectedVariant, 1);
     });
   }
-
-  // $('.btn-buy').on('click', function(e) {
-  //   e.preventDefault();
-  //   var productId = $(this).data('buyId');
-  //   addVariantToCart(productId, 1);
-  // });
 
   $('.btn--close span').on('click', function (event) {
     closeCart();
@@ -299,4 +295,3 @@ function attachOnVariantSelectListeners(product) {
     openCart();
   });
 });
-}

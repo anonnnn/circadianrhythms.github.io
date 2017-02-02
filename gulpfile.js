@@ -119,15 +119,24 @@ gulp.task('build:images', function() {
     .on('error', gutil.log);
 })
 
+
 // Concatenates and uglifies JS files and outputs result to
 // the appropriate location(s).
-gulp.task('build:scripts', function() {
+gulp.task('scripts', function() {
   var bundleStream = browserify(appJsFilesGlob).bundle()
   bundleStream
     .pipe(source("appJsFilesGlob"))
     .pipe(rename('main.js'))
     .pipe(gulp.dest(jekyllScriptFiles))
     .pipe(gulp.dest(jekyllScriptFiles2))
+
+  // return gulp.src('_app/js/**/*.js')
+  //   .pipe(concat('main.js'))
+  //   .pipe(gulp.dest('assets/js'))
+  //   .pipe(rename({ suffix: '.min' }))
+  //   .pipe(uglify())
+  //   .pipe(gulp.dest('assets/js'))
+    // .pipe(notify({ message: 'Scripts task complete' }));
 });
 
 // Runs Jekyll build
@@ -159,7 +168,9 @@ gulp.task('serve', () => {
   });
 
   gulp.watch('_app/css/**/*.css', ['build:styles']);
-  gulp.watch('_app/css/**/*.css', ['build:scripts']);
+  gulp.watch('_app/js/**/*.js', ['scripts']);
+  // Watch Jekyll html files
+  gulp.watch(['**/*.html'], ['jekyll']);
 });
 
 
@@ -168,7 +179,7 @@ gulp.task('serve', () => {
 // });
 
 
-gulp.task('default', ['build:scripts', 'build:images', 'build:fonts', 'build:styles', 'jekyll', 'serve']);
+gulp.task('default', ['scripts', 'build:images', 'build:fonts', 'build:styles', 'jekyll', 'serve']);
 
 /* Sass and image file changes can be streamed directly to BrowserSync without
 reloading the entire page. Other changes, such as changing JavaScript or

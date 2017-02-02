@@ -10244,25 +10244,14 @@ var shopify = require('./modules/shopify');
 // var jekyllAjax = require('./modules/jekyllAjax');
 // // Detect if JavaScript is enabled
 detect();
-shopify();
 jquery();
+shopify();
+
 // history();
 // jekyllAjax();
 //
 // // Print success message to console
 // console.log('<head> scripts loaded.')
-
-
-$(window).on('load', function() {
-  // var $container = $('.grid');
-
-  // $container.imagesLoaded( function() {
-    $('.grid').masonry({
-    // options
-    itemSelector: '.grid-item'
-    });
-  // });
-});
 
 },{"./lib/detect":1,"./lib/jquery":2,"./modules/shopify":4}],4:[function(require,module,exports){
 
@@ -10292,8 +10281,35 @@ module.exports = function () {
   }
 
 
-  var ids = [];
-  var selectedVariants = [];
+    var ids = [];
+    var selectedVariants = [];
+
+  $('.buy-button').each(function(){
+    console.log('hiii')
+    var id = $(this).attr('data-id');
+    ids.push(id);
+  }).promise().done( function(){
+    client.fetchQueryProducts({products_ids: ids}).then(function (products) {
+      for(var index in products) {
+        var product = {
+          id: products[index].id,
+          selectedVariant: products[index].selectedVariant,
+          selectedVariantImage: products[index].selectedVariantImage,
+          currentOptions: products[index].options
+        }
+
+        selectedVariants.push(products[index].selectedVariant);
+
+        var variantSelectors = generateSelectors(products[index]);
+        $('.variant-selectors').html(variantSelectors);
+        attachBuyButtonListeners(products[index]);
+        attachOnVariantSelectListeners(products[index]);
+      }
+    });
+    attachQuantityIncrementListeners();
+    attachQuantityDecrementListeners();
+    attachCheckoutButtonListeners();
+  });
 
   function updateCartCount(lineItems) {
     var total = 0;
@@ -10514,21 +10530,21 @@ function attachOnVariantSelectListeners(product) {
   ============================================================
   ============================================================
   ============================================================ */
-  // function attachBuyButtonListeners(product) {
-  //   var el = document.getElementById(product.id);
-  //   $(el).on('click', function (event) {
-  //     event.preventDefault();
-  //     var id = product.selectedVariant.id;
-  //     addVariantToCart(product.selectedVariant, 1);
-  //   });
-  // }
+  function attachBuyButtonListeners(product) {
+    console.log(product)
+    var el = document.getElementById(product.id);
+    $(el).on('click', function (event) {
+      event.preventDefault();
+      var id = product.selectedVariant.id;
+      addVariantToCart(product.selectedVariant, 1);
+    });
+  }
 
-  $('.btn-buy').on('click', function(e) {
-    e.preventDefault();
-
-    var productId = $(this).data('buyId');
-    addVariantToCart(productId, 1);
-  });
+  // $('.btn-buy').on('click', function(e) {
+  //   e.preventDefault();
+  //   var productId = $(this).data('buyId');
+  //   addVariantToCart(productId, 1);
+  // });
 
   $('.btn--close span').on('click', function (event) {
     closeCart();

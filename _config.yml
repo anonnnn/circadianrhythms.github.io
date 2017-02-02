@@ -20,3 +20,11 @@ markdown: kramdown
 
 collections:
 - radio
+
+exclude:
+- _app
+- Gemfile
+- Gemfile.lock
+- gulpfile.js
+- node_modules
+- package.json

@@ -5724,64 +5724,70 @@ img { max-width: 100%; }
 .fotorama--fullscreen .fotorama__nav:after,.fotorama--fullscreen .fotorama__nav:before,.fotorama--fullscreen .fotorama__stage:after,.fotorama--fullscreen .fotorama__stage:before,.fotorama__wrap--fade .fotorama__stage:after,.fotorama__wrap--fade .fotorama__stage:before,.fotorama__wrap--no-shadows .fotorama__nav:after,.fotorama__wrap--no-shadows .fotorama__nav:before,.fotorama__wrap--no-shadows .fotorama__stage:after,.fotorama__wrap--no-shadows .fotorama__stage:before{display:none}
 
 
-.youtube-player {
-        position: relative;
-        padding-bottom: 56.23%;
-        /* Use 75% for 4:3 videos */
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        background: #000;
-        margin: 5px;
-    }
+/* Adapted from
+   Light YouTube Embeds by @labnol
+   http://labnol.org/?p=27941 */
 
 
-.youtube-player iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 100;
-        background: transparent;
-    }
+.light-video-embed {
+  position: relative;
+  padding-bottom: 56.23%;
+  /* Use 75% for 4:3 videos */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin: 5px;
+}
 
 
-.youtube-player img {
-        bottom: 0;
-        display: block;
-        left: 0;
-        margin: auto;
-        max-width: 100%;
-        width: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        border: none;
-        height: auto;
-        cursor: pointer;
-        -webkit-transition: .4s all;
-        -moz-transition: .4s all;
-        transition: .4s all;
-    }
+.light-video-embed iframe,
+.light-video-embed-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: transparent;
+}
 
 
-.youtube-player img:hover {
-        -webkit-filter: brightness(75%);
-    }
+.light-video-embed img {
+  bottom: 0;
+  display: block;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  height: auto;
+  cursor: pointer;
+  -webkit-transition: .4s all;
+  -moz-transition: .4s all;
+  transition: .4s all;
+}
 
 
-.youtube-player .play {
-        height: 90px;
-        width: 90px;
-        left: 50%;
-        top: 50%;
-        margin-left: -45px;
-        margin-top: -45px;
-        position: absolute;
-        background: url("/assets/images/cr001/play.svg") no-repeat;
-        cursor: pointer;
-    }
+.light-video-embed img:hover {
+  -webkit-filter: brightness(75%);
+}
+
+
+.light-video-embed .play {
+  height: 90px;
+  width: 90px;
+  left: 50%;
+  top: 50%;
+  margin-left: -36px;
+  margin-top: -36px;
+  position: absolute;
+background: url("/assets/images/cr001/play.svg") no-repeat;
+  cursor: pointer;
+}
 
 
 @font-face {

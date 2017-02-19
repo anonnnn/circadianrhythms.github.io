@@ -39,6 +39,10 @@
   margin-right: auto;
 }
 
+.ml-25 { margin-left: 25%; }
+
+.w-25 { width: 25%;}
+
 .pa0 { padding: 0; }
 
 .pa1 { padding: .25rem; }

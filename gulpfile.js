@@ -97,6 +97,7 @@ gulp.task('build:styles', function() {
   gulp.src(appCssFilesGlob)
     .pipe(postcss(processors))
     .pipe(gulp.dest(jekyllStyleFiles))
+    .pipe(gulp.dest('_site/assets/css'))
     .on('error', gutil.log);
 });
 
@@ -115,6 +116,7 @@ gulp.task('build:fonts', function() {
 gulp.task('build:images', function() {
   return gulp.src(appImageFilesGlob)
     .pipe(gulp.dest(jekyllImageFiles))
+    .pipe(gulp.dest('_site/assets/images'))
     .pipe(size({showFiles: true}))
     .on('error', gutil.log);
 })
@@ -123,26 +125,24 @@ gulp.task('build:images', function() {
 // Concatenates and uglifies JS files and outputs result to
 // the appropriate location(s).
 gulp.task('scripts', function() {
-  var bundleStream = browserify(appJsFilesGlob).bundle()
-  bundleStream
+  var bundleStream = browserify({entries: appJsFilesGlob});
+
+  return bundleStream.bundle()
+    .on('error', function (err) {
+        console.log(err.toString());
+        this.emit("end");
+    })
     .pipe(source("appJsFilesGlob"))
     .pipe(rename('main.js'))
-    .pipe(gulp.dest(jekyllScriptFiles))
-    .pipe(gulp.dest(jekyllScriptFiles2))
+    .pipe(gulp.dest('assets/js'))
 
-  // return gulp.src('_app/js/**/*.js')
-  //   .pipe(concat('main.js'))
-  //   .pipe(gulp.dest('assets/js'))
-  //   .pipe(rename({ suffix: '.min' }))
-  //   .pipe(uglify())
-  //   .pipe(gulp.dest('assets/js'))
-    // .pipe(notify({ message: 'Scripts task complete' }));
+
+
 });
 
 // Runs Jekyll build
 gulp.task('jekyll', () => {
   const jekyll = child.spawn('jekyll', ['build',
-    '--watch',
     '--incremental',
     '--drafts'
   ]);
@@ -169,8 +169,11 @@ gulp.task('serve', () => {
 
   gulp.watch('_app/css/**/*.css', ['build:styles']);
   gulp.watch('_app/js/**/*.js', ['scripts']);
+  gulp.watch(['_app/images/**/*'], ['build:images']);
+
   // Watch Jekyll html files
-  gulp.watch(['**/*.html'], ['jekyll']);
+  gulp.watch(['*.html', '_includes/**/*.html'], ['jekyll']);
+
 });
 
 

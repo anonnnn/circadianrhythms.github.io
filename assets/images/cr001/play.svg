@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Copy-61" transform="translate(-467.000000, -316.000000)">
+            <g id="Group-2" transform="translate(467.000000, 316.000000)">
+                <path d="M0,1 L1,0 L1,90 L0,89 L90,89 L89,90 L89,0 L90,1 L0,1 Z M90,0 L90,90 L0,90 L0,0 L90,0 Z" id="Rectangle-6" fill="#FFFFFF"></path>
+                <path d="M28.8125,64 C28.6620363,64 28.5115748,63.9548616 28.3611111,63.8645833 C28.1203692,63.7141196 28,63.4884274 28,63.1875 L28,25.8125 C28,25.5115726 28.1203692,25.2858804 28.3611111,25.1354167 C28.6319458,24.9548602 28.9027764,24.9398141 29.1736111,25.0902778 L66.5486111,43.7777778 C66.8495385,43.9282415 67,44.1689798 67,44.5 C67,44.8310202 66.8495385,45.0717585 66.5486111,45.2222222 L29.1736111,63.9097222 C28.9930547,63.9699077 28.8726855,64 28.8125,64 L28.8125,64 Z" id="play" stroke="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,4 +1,12 @@
 @import 'tachyons/tachyons.css';
 
+@import 'lib/fotorama.css';
+@import 'lib/lightYoutubeEmbed.css';
+
+@import 'modules/fonts.css';
 @import 'modules/base.css';
+@import 'modules/typography.css';
 @import 'modules/cart.css';
+@import 'modules/buttons.css';
+
+@import 'modules/cr001.css';

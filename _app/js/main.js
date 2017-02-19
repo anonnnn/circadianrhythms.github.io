@@ -1,16 +1,21 @@
-// Define Dependencies
-var detect = require('./lib/detect');
-var jquery = require('./lib/jquery');
+var $ = require('jquery');
+var waypoints = require('./lib/waypoints');
+var fotorama = require('./lib/fotorama');
+var lightYoutubeEmbeds = require('./lib/lightYoutubeEmbeds');
+var cr001waypoints = require('./modules/cr001-waypoints');
+var modal = require('./modules/modal');
 var shopify = require('./modules/shopify');
-// var history = require('./modules/history');
-// var jekyllAjax = require('./modules/jekyllAjax');
-// // Detect if JavaScript is enabled
-detect();
-jquery();
-shopify();
+var populateCollection = require('./modules/populateCollection');
+var height = require('./modules/height');
+var fullwidthvideowrapper = require('./modules/full-width-video-wrapper');
 
-// history();
-// jekyllAjax();
-//
-// // Print success message to console
-// console.log('<head> scripts loaded.')
+lightYoutubeEmbeds();
+waypoints();
+fotorama();
+height();
+cr001waypoints();
+modal();
+shopify();
+populateCollection();
+fullwidthvideowrapper();
+

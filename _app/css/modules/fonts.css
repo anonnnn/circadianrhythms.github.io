@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Druk-WideMedium';
+  src: url('../fonts/DrukWideMedium.eot');
+}
+
+@font-face {
+  font-family: 'Druk-WideMedium';
+  src: url('../fonts/DrukWideMedium.woff') format('woff'),
+  url('../fonts/DrukWideMedium.svg#Druk-WideMedium') format('svg');
+}
+
+@font-face {
+  font-family: 'UniversLTStd-Cn';
+  src: url('../fonts/UniversLTStd-Cn.eot');
+}
+
+@font-face {
+  font-family: 'UniversLTStd-Cn';
+  src: url('../fonts/UniversLTStd-Cn.woff') format('woff'),
+  url('../fonts/UniversLTStd-Cn.svg#UniversLTStd-Cn') format('svg');
+}

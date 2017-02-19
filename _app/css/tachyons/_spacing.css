@@ -53,6 +53,9 @@
   margin-right: auto;
 }
 
+.ml-25 { margin-left: 25%; }
+.w-25 { width: 25%;}
+
 .pa0 { padding: var(--spacing-none); }
 .pa1 { padding: var(--spacing-extra-small); }
 .pa2 { padding: var(--spacing-small); }

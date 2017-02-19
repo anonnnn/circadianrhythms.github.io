@@ -1,0 +1,44 @@
+.btn {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+.btn-outline {
+  box-shadow: inset 0 0 0 1px #fff;
+}
+.btn-outline:hover {
+  background: #fff;
+  color: #000;
+}
+.btn-block {
+  display: block;
+  padding: 12px 0px 10px 0px;
+  width: 100%;
+}
+.btn-inline {
+  display: inline-block;
+  padding: 12px 15px 10px 15px;
+}
+@media screen and (min-width: 48em) {
+  .btn-block-ns {
+    display: block;
+    padding: 12px 0px 10px 0px;
+    width: 100%;
+  }
+
+  .btn-inline-ns {
+    display: inline-block;
+    padding: 12px 12px 10px 12px;
+  }
+}
+.btn-arrow {
+  opacity: .6;
+  cursor: pointer;
+}
+.btn-arrow:hover {
+  opacity: 1;
+}
+.bg-black .btn-arrow-inactive {
+  opacity: .2;
+}

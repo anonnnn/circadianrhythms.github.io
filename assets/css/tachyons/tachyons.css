@@ -598,6 +598,9 @@ input[type="url"],
 .contain { background-size: contain; }
 
 
+.bg-fixed { background-position: fixed;}
+
+
 @media screen and (min-width: 40em) {
   .cover-ns { background-size: cover; }
   .contain-ns { background-size: contain; }
@@ -1326,6 +1329,9 @@ input[type="url"],
 
 
 .left--2   { left:   -2rem; }
+
+
+.top-50 { top: 50%; }
 
 
 .absolute--fill {
@@ -2233,6 +2239,9 @@ code, .code {
 
 
 .h-100 { height: 100%; }
+
+
+.h-800 { height: 800px; }
 
 
 /* String Properties */
@@ -3378,6 +3387,12 @@ code, .code {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+.ml-25 { margin-left: 25%; }
+
+
+.w-25 { width: 25%;}
 
 
 .pa0 { padding: 0; }
@@ -5261,6 +5276,36 @@ img { max-width: 100%; }
    - Solids
    - Transparencies
 */
+
+
+.bg-black {
+  background: #181818;
+}
+
+
+.bg-black-90 {
+  background: rgba(00,00,00,.9);
+}
+
+
+.bg-red {
+  background: red;
+}
+
+
+.bg-blue {
+  background: blue;
+}
+
+
+.bg-green {
+  background: green;
+}
+
+
+.bg-yellow {
+  background: yellow;
+}
 
 
 /*

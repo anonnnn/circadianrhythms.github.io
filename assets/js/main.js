@@ -32,7 +32,7 @@ function lightEmbedInit() {
         var embed = 'https://www.youtube.com/embed/ID?autoplay=1';
       }
       else if (hostname == 'i.vimeocdn.com') {
-        var embed = '//player.vimeo.com/video/ID?autoplay=1';
+        var embed = '//player.vimeo.com/video/ID?autoplay=1&loop=1&title=0';
       }
 
       iframe.setAttribute('src', embed.replace('ID', id));

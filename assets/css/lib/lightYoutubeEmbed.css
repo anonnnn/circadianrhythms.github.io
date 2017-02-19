@@ -57,3 +57,7 @@
 background: url("/assets/images/cr001/play.svg") no-repeat;
   cursor: pointer;
 }
+
+.iframe .share-button {
+    display: none !important;
+}

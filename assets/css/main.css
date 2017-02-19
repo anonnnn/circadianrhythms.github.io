@@ -5790,6 +5790,11 @@ background: url("/assets/images/cr001/play.svg") no-repeat;
 }
 
 
+.iframe .share-button {
+    display: none !important;
+}
+
+
 @font-face {
   font-family: 'Druk-WideMedium';
   src: url('../fonts/DrukWideMedium.eot');

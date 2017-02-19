@@ -23,7 +23,7 @@ module.exports = function () {
 
     function labnolIframe() {
         var iframe = document.createElement("iframe");
-        var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+        var embed = "https://www.youtube.com/embed/ID?autoplay=1?rel=0";
         iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
         iframe.setAttribute("frameborder", "0");
         iframe.setAttribute("allowfullscreen", "1");

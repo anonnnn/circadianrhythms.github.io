@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-<div class="cover fixed w-100 h-100" style="background-image:url('assets/images/cr001/cr001a_bg.jpg');"></div>
+<div id="cr001-bg" class="cover fixed w-100 h-100" style="background-image:url('assets/images/cr001/cr001a_bg.jpg');"></div>
 
-<div class="fixed bottom-2 bt bb b--white w-100 pa3 small z-5">
+<div class="cr001-ep fixed bottom-2 bt bb b--white w-100 pa3 small z-5">
   <div class="fl">
     <div class="absolute top-0" style="margin-top: -15px;">
       <img class="ba b--white" src="assets/images/cr001/cr001a_thumb.png" />
@@ -14,12 +14,13 @@ layout: default
   </div>
 
   <div class="fr white">
-    <a class="white" href="">BUY VINYL</a>
+    <a class="white buy-button" id="8627174408" href="" data-id="8627174408" href="">BUY VINYL</a>
     <a class="ml3 white" href="">iTUNES</a>
     <a class="ml3 white" href="">SPOTIFY</a>
     <a class="ml3 white" href="">SOUNDCLOUD</a>
   </div>
 </div>
+
 
 <div class="fixed cr001-logo mt3 ml3 z-2">
 
@@ -38,7 +39,7 @@ layout: default
   </div>
 </div>
 
-<div class="menu fixed top-50 left-1 z-2">
+<div id="cr001-menu" class="menu fixed top-50 left-1 z-2">
   <div>
     <a href="" class="menu-link f2 o-100 white no-underline" id="menu-link-cr001-a">CR001-A</a>
   </div>
@@ -53,24 +54,25 @@ layout: default
   </div>
 </div>
 
-<div class="content absolute h-100 w-100 z-1">
+<div class="content absolute h-150 w-100 z-1">
 
-  <div class="h-100" id="cr001-a">
-
-    <div class="h-100 flex items-center justify-center px3">
+  <div class="bg-g-black-to-trans h-100 w-100">
+    <div class="flex items-center justify-center px3" style="height: 66.66666666666666%;">
       <div>
         <div>
-          <img src="assets/images/cr001/cr001_logo_intro.svg" class="w-100 mb4" />
-          <div class="flex flex-auto">
-<!--             <div><a id="8627174408" href="" data-id="8627174408" class="buy-button btn btn-inline btn-outline mr2">Buy vinyl</a></div>
-            <div><a href="" class="btn btn-inline btn-outline mr2 ">iTunes</a></div>
-            <div><a href="" class="btn btn-inline btn-outline mr2">Soundcloud</a></div>
-            <div><a href="" class="btn btn-inline btn-outline">Info</a></div> -->
-          </div>
+          <img id="logo-intro" src="assets/images/cr001/cr001_logo_intro.svg" class="w-100 mb4 mt5" />
         </div>
       </div>
     </div>
+  </div>
 
+  <div class="h-100" id="cr001-a">
+    <div class="h-100 flex items-center justify-center px3">
+      <div>
+        <div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="h-100" id="cr001-b">
@@ -79,8 +81,10 @@ layout: default
     </div>
   </div>
 
-  <div class="bg-black h-auto fl relative cb w-100" id="cr001-c">
+
+  <div class="h-auto fl relative cb w-100" id="cr001-c">
     <div class="overflow-hidden">
+      <img class="db ma0 w-100" src="assets/images/cr001/cr001-c/cr001c-0.png" />
       <img class="db ma0" src="assets/images/cr001/cr001-c/cr001c-1.jpg" />
       <img class="db ma0" src="assets/images/cr001/cr001-c/cr001c-2.jpg" />
       <img class="db ma0" src="assets/images/cr001/cr001-c/cr001c-3.jpg" />
@@ -104,9 +108,9 @@ layout: default
         <div class="f1">10.03.17</div>
         <div class="f1">CR001</div>
         <div class="f1">@ SUM VENUE 10-3AM</div>
-        <div class="f1">SUM DJ</div>
+        <div class="f1">SUM GUI</div>
         <div class="f1">DJ MAYBE</div>
-        <div class="f1">A TRANCE JOKE</div>
+        <div class="f1">DAVID GUETTA</div>
         <div>
           <a class="btn btn-outline pa3 mt4 dib">BUY TICKETS</a>
         </div>

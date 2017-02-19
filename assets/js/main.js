@@ -33,7 +33,7 @@ module.exports = function () {
 
     function labnolIframe() {
         var iframe = document.createElement("iframe");
-        var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+        var embed = "https://www.youtube.com/embed/ID?autoplay=1?rel=0";
         iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
         iframe.setAttribute("frameborder", "0");
         iframe.setAttribute("allowfullscreen", "1");
@@ -734,24 +734,42 @@ fullwidthvideowrapper();
 },{"./lib/fotorama":1,"./lib/lightYoutubeEmbeds":2,"./lib/waypoints":3,"./modules/cr001-waypoints":5,"./modules/full-width-video-wrapper":6,"./modules/height":7,"./modules/modal":8,"./modules/populateCollection":9,"./modules/shopify":10,"jquery":11}],5:[function(require,module,exports){
 module.exports = function() {
   $(document).ready(function() {
+
+    $('#logo-intro').css('opacity', 1);
+    $('#cr001-bg').css('opacity', 1);
+
+
+    var waypoint = new Waypoint({
+      element: document.getElementById('cr001-a'),
+      handler: function(direction) {
+        if(direction === 'down') {
+          $('.cr001-ep').addClass('cr001-ep-active');
+          $('#cr001-menu').addClass('cr001-menu-active');
+          $('.cr001-logo').addClass('logo-active');
+        }
+      },
+      offset: '100%'
+    });
+
     var waypoint = new Waypoint({
       element: document.getElementById('cr001-a'),
       handler: function(direction) {
         if(direction === 'up') {
           $('.menu-link').removeClass('o-100').addClass('o-30');
           $('#menu-link-cr001-a').removeClass('o-30').addClass('o-100');
+          $('.cr001-ep').removeClass('cr001-ep-active');
+          $('#cr001-menu').removeClass('cr001-menu-active');
+          $('.cr001-logo').removeClass('logo-active');
         }
       },
       offset: '50%'
     });
-
     var waypoint = new Waypoint({
       element: document.getElementById('cr001-b'),
       handler: function(direction) {
         if(direction === 'down') {
           $('.menu-link').removeClass('o-100').addClass('o-30');
           $('#menu-link-cr001-b').removeClass('o-30').addClass('o-100');
-          $('.cr001-logo').addClass('logo-active');
         } else {
           $('.menu-link').removeClass('o-100').addClass('o-30');
           $('#menu-link-cr001-a').removeClass('o-30').addClass('o-100');

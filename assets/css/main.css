@@ -2241,6 +2241,9 @@ code, .code {
 .h-100 { height: 100%; }
 
 
+.h-150 { height: 150%; }
+
+
 .h-800 { height: 800px; }
 
 
@@ -6261,6 +6264,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
+.bg-g-black-to-trans {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+51,000000+100&0.9+51,0+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.9) 51%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.9) 51%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.9) 51%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+
 .cr001-logo {
   top: -1000px;
 -webkit-transition: all 500ms linear;
@@ -6273,4 +6286,41 @@ transition: all 500ms linear;
 
 .logo-active {
   top: 0px;
+}
+
+
+.cr001-ep {
+  -webkit-transition: all 500ms linear;
+  -moz-transition: all 500ms linear;
+  -ms-transition: all 500ms linear;
+  -o-transition: all 500ms linear;
+  transition: all 500ms linear;
+  bottom: -1000px;
+}
+
+
+.cr001-ep-active {
+  bottom: 30px;
+}
+
+
+#cr001-menu {
+  left: -500px;
+  -webkit-transition: all 500ms linear;
+  -moz-transition: all 500ms linear;
+  -ms-transition: all 500ms linear;
+  -o-transition: all 500ms linear;
+  transition: all 500ms linear;
+}
+
+
+#cr001-menu.cr001-menu-active {
+  left: 1rem;
+}
+
+
+#logo-intro,
+#cr001-bg {
+  opacity: 0;
+  transition: opacity 1500ms ease-in-out;
 }

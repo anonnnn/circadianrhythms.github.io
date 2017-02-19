@@ -1,23 +1,41 @@
 module.exports = function() {
   $(document).ready(function() {
+
+    $('#logo-intro').css('opacity', 1);
+    $('#cr001-bg').css('opacity', 1);
+
+
+    var waypoint = new Waypoint({
+      element: document.getElementById('cr001-a'),
+      handler: function(direction) {
+        if(direction === 'down') {
+          $('.cr001-ep').addClass('cr001-ep-active');
+          $('#cr001-menu').addClass('cr001-menu-active');
+          $('.cr001-logo').addClass('logo-active');
+        }
+      },
+      offset: '100%'
+    });
+
     var waypoint = new Waypoint({
       element: document.getElementById('cr001-a'),
       handler: function(direction) {
         if(direction === 'up') {
           $('.menu-link').removeClass('o-100').addClass('o-30');
           $('#menu-link-cr001-a').removeClass('o-30').addClass('o-100');
+          $('.cr001-ep').removeClass('cr001-ep-active');
+          $('#cr001-menu').removeClass('cr001-menu-active');
+          $('.cr001-logo').removeClass('logo-active');
         }
       },
       offset: '50%'
     });
-
     var waypoint = new Waypoint({
       element: document.getElementById('cr001-b'),
       handler: function(direction) {
         if(direction === 'down') {
           $('.menu-link').removeClass('o-100').addClass('o-30');
           $('#menu-link-cr001-b').removeClass('o-30').addClass('o-100');
-          $('.cr001-logo').addClass('logo-active');
         } else {
           $('.menu-link').removeClass('o-100').addClass('o-30');
           $('#menu-link-cr001-a').removeClass('o-30').addClass('o-100');

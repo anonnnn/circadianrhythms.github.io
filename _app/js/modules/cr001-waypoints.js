@@ -14,7 +14,7 @@ module.exports = function() {
           $('.cr001-logo').addClass('logo-active');
         }
       },
-      offset: '100%'
+      offset: '70%'
     });
 
     var waypoint = new Waypoint({

@@ -756,7 +756,7 @@ module.exports = function() {
           $('.cr001-logo').addClass('logo-active');
         }
       },
-      offset: '100%'
+      offset: '70%'
     });
 
     var waypoint = new Waypoint({
@@ -885,9 +885,9 @@ module.exports = function () {
 
     var ids = [];
     var client = ShopifyBuy.buildClient({
-      apiKey: '0ca3df7d8bc98f977650e10d5dcd1274',
-      domain: 'circadianrhythms.myshopify.com',
-      appId: '6'
+    apiKey: 'acfa5c995bb522caecd503f09fb66385',
+    domain: 'circadian-rhythms.myshopify.com',
+    appId: '6'
     });
 
     var populate = function ( product ) {
@@ -907,7 +907,7 @@ module.exports = function () {
         }
         var image = {
           img: imageSrc,
-          fit: fit
+          fit: 'contain'
         }
         imageData.push(image);
       }
@@ -1012,8 +1012,8 @@ module.exports = function () {
 module.exports = function () {
   $(function() {
   var client = ShopifyBuy.buildClient({
-    apiKey: '0ca3df7d8bc98f977650e10d5dcd1274',
-    domain: 'circadianrhythms.myshopify.com',
+    apiKey: 'acfa5c995bb522caecd503f09fb66385',
+    domain: 'circadian-rhythms.myshopify.com',
     appId: '6'
   });
 

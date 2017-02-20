@@ -6232,10 +6232,26 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
+.btn-black.btn-outline {
+  box-shadow: inset 0 0 0 1px #000;
+}
+
+
+.btn-black.btn-outline:hover {
+  background: #000;
+  color: #fff;
+}
+
+
 .btn-block {
   display: block;
   padding: 12px 0px 10px 0px;
   width: 100%;
+}
+
+
+.btn-black {
+  color: #000000;
 }
 
 

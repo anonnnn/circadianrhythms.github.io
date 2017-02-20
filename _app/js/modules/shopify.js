@@ -2,8 +2,8 @@
 module.exports = function () {
   $(function() {
   var client = ShopifyBuy.buildClient({
-    apiKey: '0ca3df7d8bc98f977650e10d5dcd1274',
-    domain: 'circadianrhythms.myshopify.com',
+    apiKey: 'acfa5c995bb522caecd503f09fb66385',
+    domain: 'circadian-rhythms.myshopify.com',
     appId: '6'
   });
 

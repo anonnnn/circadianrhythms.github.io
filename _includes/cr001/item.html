@@ -4,12 +4,11 @@
   {% assign textColour = 'black' %}
 {% endif %}
 
-<div id='item-{{include.id}}' class="collectionItem w-50 fl">
+<div id='item-{{include.id}}' class="collectionItem w-50 pa5 fl">
   <div class="w-100">
-    <a class="btn-arrow btn-arrow-inactive btn-prev absolute top-50 right-0 mr4" data-productID="{{include.id}}">
-      <img src="assets/images/arrow-left-{{textColour}}.svg" />
-    </a>
+
   </div>
+
   <div class="w-100 relative">
     <div class="fotorama"
       data-auto="false"
@@ -22,26 +21,23 @@
       nav="false"
     >
     </div>
+    <div class="top-1 right-1 thumbnails absolute"></div>
+    <a class="pa3 btn-arrow btn-next bg-white absolute top-50 right-1 ml4" data-productID="{{include.id}}">
+      <img src="assets/images/arrow-right-black.svg" />
+    </a>
+    <a class="pa3 btn-arrow btn-arrow-inactive bg-white btn-prev absolute top-50 left-1 mr4" data-productID="{{include.id}}">
+      <img src="assets/images/arrow-left-black.svg" />
+    </a>
   </div>
 
-
-  <div class="w-100 h-100-ns fl relative">
-    <div class="ph4 pl4-ns pr0-ns mt5 w-100 w-80-ns">
-      <h3 class="itemTitle f5 mt3 mb1 text ttu w-100" ></h3>
+  <div class="pa4 w-100 bg-white black fl relative">
+      <h3 class="itemTitle f5 mt0 mb1 text ttu w-100" ></h3>
       <div class="itemPrice o-60"></div>
       <div class="o-60">ONE SIZE  </div>
-      <div class="itemDescription mt3 smallcaps o-70"></div>
-      <div class="tc tl-ns thumbnails mt2 mt0-ns mb2 w-100-s"></div>
-
+      <div class="itemDescription mt3 smallcaps o-70" style="height: 60px;"></div>
       <div>
-        <a id="{{ include.id }}" data-id="{{ include.id }}" class="buy-button btn btn-outline btn-inline">Buy</a>
+        <a id="{{ include.id }}" data-id="{{ include.id }}" class="buy-button btn btn-black btn-block btn-outline">Buy</a>
       </div>
-
-    <a class="btn-arrow btn-next absolute top-50 left-0 ml4" data-productID="{{include.id}}">
-      <img src="assets/images/arrow-right-{{textColour}}.svg" />
-    </a>
-
-    </div>
   </div>
 </div>
 

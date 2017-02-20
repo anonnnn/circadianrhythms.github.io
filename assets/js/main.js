@@ -907,7 +907,7 @@ module.exports = function () {
         }
         var image = {
           img: imageSrc,
-          fit: 'contain'
+          fit: 'cover'
         }
         imageData.push(image);
       }

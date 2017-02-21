@@ -727,6 +727,7 @@ var shopify = require('./modules/shopify');
 var populateCollection = require('./modules/populateCollection');
 var height = require('./modules/height');
 var fullwidthvideowrapper = require('./modules/full-width-video-wrapper');
+var imageLoading = require('./modules/imageLoading');
 
 lightYoutubeEmbeds();
 waypoints();
@@ -737,9 +738,10 @@ modal();
 shopify();
 populateCollection();
 fullwidthvideowrapper();
+imageLoading();
 
 
-},{"./lib/fotorama":1,"./lib/lightYoutubeEmbeds":2,"./lib/waypoints":3,"./modules/cr001-waypoints":5,"./modules/full-width-video-wrapper":6,"./modules/height":7,"./modules/modal":8,"./modules/populateCollection":9,"./modules/shopify":10,"jquery":11}],5:[function(require,module,exports){
+},{"./lib/fotorama":1,"./lib/lightYoutubeEmbeds":2,"./lib/waypoints":3,"./modules/cr001-waypoints":5,"./modules/full-width-video-wrapper":6,"./modules/height":7,"./modules/imageLoading":8,"./modules/modal":9,"./modules/populateCollection":10,"./modules/shopify":11,"jquery":12}],5:[function(require,module,exports){
 module.exports = function() {
   $(document).ready(function() {
 
@@ -863,6 +865,46 @@ module.exports = function () {
 
 },{}],8:[function(require,module,exports){
 module.exports = function () {
+  // main image loaded ?
+
+  $('#cr001-bg-img').on('load', function() {
+    // hide/remove the loading image
+    $('#cr001-bg-black').fadeOut();
+  });
+
+  var imgAddresses = [
+    'assets/images/cr001/cr001-c/cr001c-0.png',
+    'assets/images/cr001/cr001-c/cr001c-1.jpg',
+    'assets/images/cr001/cr001-c/cr001c-2.jpg',
+    'assets/images/cr001/cr001-c/cr001c-3.jpg',
+    'assets/images/cr001/cr001-c/cr001c-4.jpg',
+    'assets/images/cr001/cr001-c/cr001c-5.jpg',
+    'assets/images/cr001/cr001-c/cr001c-6.jpg',
+  ];
+
+  function loadImage(counter) {
+    //Break out if no more images
+    if(counter==imgAddresses.length) { return; }
+
+    //Grab an image obj
+    var I = document.getElementById("img"+counter);
+
+    //Monitor load or error events, moving on to next image in either case
+    I.onload = I.onerror = function() { loadImage(counter+1); }
+
+    //Change source (then wait for event)
+    I.src = imgAddresses[counter];
+  }
+
+  $(document).ready(function() {
+
+  loadImage(0);
+
+  });
+}
+
+},{}],9:[function(require,module,exports){
+module.exports = function () {
 
   $(document).ready( function() {
     $('body').on('click', '.modal-trigger', function(e) {
@@ -879,7 +921,7 @@ module.exports = function () {
 
 }
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports = function () {
   $(document).ready(function() {
 
@@ -1007,7 +1049,7 @@ module.exports = function () {
   });
 }
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 
 module.exports = function () {
   $(function() {
@@ -1311,7 +1353,7 @@ function attachOnVariantSelectListeners(product) {
 });
 }
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.1.1
  * https://jquery.com/

@@ -4,6 +4,9 @@ layout: default
 <audio autoplay>
   <source src="assets/images/cr001/metal.mp3" type="audio/mpeg">
 </audio>
+
+<img id="cr001-bg-img" src="assets/images/cr001/cr001a_bg.jpg" class="dn" />
+<div id="cr001-bg-black" class="cover fixed w-100 h-100 bg-black"></div>
 <div id="cr001-bg" class="cover fixed w-100 h-100" style="background-image:url('assets/images/cr001/cr001a_bg.jpg');"></div>
 
 <div class="cr001-ep fixed bottom-2 bt bb b--white w-100 pa3 small z-5">
@@ -90,13 +93,13 @@ layout: default
 
   <div class="h-auto fl relative cb w-100" id="cr001-c">
     <div class="overflow-hidden">
-      <img class="db ma0 w-100" src="assets/images/cr001/cr001-c/cr001c-0.png" />
-      <img class="db ma0" src="assets/images/cr001/cr001-c/cr001c-1.jpg" />
-      <img class="db ma0" src="assets/images/cr001/cr001-c/cr001c-2.jpg" />
-      <img class="db ma0" src="assets/images/cr001/cr001-c/cr001c-3.jpg" />
-      <img class="db ma0" src="assets/images/cr001/cr001-c/cr001c-4.jpg" />
-      <img class="db ma0" src="assets/images/cr001/cr001-c/cr001c-5.jpg" />
-      <img class="db ma0" src="assets/images/cr001/cr001-c/cr001c-6.jpg" />
+      <img id="img0" class="db ma0 w-100"/>
+      <img id="img1" class="db ma0"/>
+      <img id="img2" class="db ma0" />
+      <img id="img3" class="db ma0" />
+      <img id="img4" class="db ma0" />
+      <img id="img5" class="db ma0" />
+      <img id="img6" class="db ma0" />
     </div>
     <div class="overflow-hidden">
       {% include cr001/item.html colour='black' id='9140622541' %}

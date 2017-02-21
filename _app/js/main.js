@@ -8,6 +8,7 @@ var shopify = require('./modules/shopify');
 var populateCollection = require('./modules/populateCollection');
 var height = require('./modules/height');
 var fullwidthvideowrapper = require('./modules/full-width-video-wrapper');
+var imageLoading = require('./modules/imageLoading');
 
 lightYoutubeEmbeds();
 waypoints();
@@ -18,4 +19,5 @@ modal();
 shopify();
 populateCollection();
 fullwidthvideowrapper();
+imageLoading();
 

@@ -8,6 +8,7 @@ var shopify = require('./modules/shopify');
 var populateCollection = require('./modules/populateCollection');
 var height = require('./modules/height');
 var fullwidthvideowrapper = require('./modules/full-width-video-wrapper');
+var nProgress = require('./lib/nProgress');
 var imageLoading = require('./modules/imageLoading');
 
 lightYoutubeEmbeds();
@@ -19,5 +20,7 @@ modal();
 shopify();
 populateCollection();
 fullwidthvideowrapper();
+nProgress();
 imageLoading();
+
 

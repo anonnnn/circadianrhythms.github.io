@@ -32,7 +32,8 @@ module.exports = function () {
 
   $(document).ready(function() {
 
-  loadImage(0);
+    loadImage(0);
 
   });
+
 }

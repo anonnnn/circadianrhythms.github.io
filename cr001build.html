@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-<audio autoplay>
+<!-- <audio autoplay>
   <source src="assets/images/cr001/metal.mp3" type="audio/mpeg">
-</audio>
+</audio> -->
 
 <img id="cr001-bg-img" src="assets/images/cr001/cr001a_bg.jpg" class="dn" />
 <div id="cr001-bg-black" class="cover fixed w-100 h-100 bg-black"></div>
@@ -11,15 +11,15 @@ layout: default
 
 <div class="cr001-ep fixed bottom-2 bt bb b--white w-100 pa3 small z-5">
   <div class="fl">
-    <div class="absolute top-0" style="margin-top: -15px;">
+    <div class="absolute top-0" style="margin-top: -10px;">
       <img class="ba b--white" src="assets/images/cr001/cr001a_thumb.png" />
     </div>
     <div style="margin-left: 90px;">
-      NOW PLAYING: TOASTY — METAL
+      <iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/305497994%3Fsecret_token%3Ds-c7jrL&amp;color=ff5500&amp;inverse=false&amp;auto_play=true&amp;show_user=true"></iframe>
     </div>
   </div>
 
-  <div class="fr white">
+  <div class="fr white" style="line-height: 24px;">
     <a class="white buy-button" id="8627174408" href="" data-id="8627174408" href="">BUY VINYL</a>
     <a class="ml3 white" href="">iTUNES</a>
     <a class="ml3 white" href="">SPOTIFY</a>
@@ -39,8 +39,12 @@ layout: default
 
 <div class="fixed mt3 mr3 z-2 right-0 topMenu">
   <div>
-    <a href="" id="openAbout" class="f2 modal-trigger" data-targetModal="modal-about">
-      <img src="assets/images/cr001/about_icon.svg" />
+<!--     <a href="" id="openAbout" class="modal-trigger white" data-targetModal="modal-about">
+      INFO
+    </a> -->
+    <a href="" class="dn btn-cart white no-underline">
+
+      CART [<span class="btn-cart__count">0</span>]
     </a>
   </div>
 </div>
@@ -71,9 +75,11 @@ layout: default
   </div>
 
   <div class="h-100" id="cr001-a">
-    <div class="h-100 flex items-center justify-center px3">
+    <!-- <div class="w-100 h-100 bg-black o-60 absolute z-0"></div> -->
+    <div class="h-100 flex items-center justify-center px3 relative z-1">
       <div>
         <div>
+          <img src="assets/images/cr001/cr001-a-artwork.png" />
         </div>
       </div>
     </div>
@@ -190,7 +196,7 @@ layout: default
       </div>
       <div class="cart-actions-container cart-section type--center">
         <div class="cart-discount-notice cart-info__small center">Shipping and discount codes are added at checkout.</div>
-        <a type="submit" class="chamferedButton chamferedButton--green btn--cart-checkout" id="checkout">
+        <a type="submit" class="btn btn-block btn-outline btn--cart-checkout" id="checkout">
           <span>Checkout</span>
         </a>
       </div>

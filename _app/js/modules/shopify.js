@@ -10,6 +10,7 @@ module.exports = function () {
   var cart;
   var cartLineItemCount;
   if(localStorage.getItem('lastCartId')) {
+    $('.btn-cart').removeClass('dn');
     client.fetchCart(localStorage.getItem('lastCartId')).then(function(remoteCart) {
       cart = remoteCart;
       cartLineItemCount = cart.lineItems.length;
@@ -20,7 +21,7 @@ module.exports = function () {
       cart = newCart;
       localStorage.setItem('lastCartId', cart.id);
       cartLineItemCount = 0;
-      $('.headerCart__count').html(0);
+      $('.btn-cart__count').html(0);
     });
   }
 
@@ -29,7 +30,6 @@ module.exports = function () {
     var selectedVariants = [];
 
   $('.buy-button').each(function(){
-    console.log('hiii')
     var id = $(this).attr('data-id');
     ids.push(id);
   }).promise().done( function(){
@@ -43,7 +43,7 @@ module.exports = function () {
         }
 
         selectedVariants.push(products[index].selectedVariant);
-
+        console.log('product', products[index].selectedVariant)
         var variantSelectors = generateSelectors(products[index]);
         $('.variant-selectors').html(variantSelectors);
         attachBuyButtonListeners(products[index]);
@@ -61,7 +61,7 @@ module.exports = function () {
       var qty = lineItems[i].quantity;
       total += qty;
     }
-    $('.headerCart__count').html(total);
+    $('.btn-cart__count').html(total);
   }
 
   /* Generate DOM elements for variant selectors
@@ -127,6 +127,7 @@ function attachOnVariantSelectListeners(product) {
       return option.name === name;
     })[0].selected = value;
 
+    console.log('product', product)
     var selectedVariant = product.selectedVariant;
     var selectedVariantImage = product.selectedVariantImage;
     updateProductTitle(product.title);
@@ -294,7 +295,7 @@ function attachOnVariantSelectListeners(product) {
     closeCart();
   });
 
-  $('.headerCart__link').on('click', function (event) {
+  $('.btn-cart').on('click', function (event) {
     event.preventDefault();
     openCart();
   });

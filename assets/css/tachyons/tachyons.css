@@ -394,7 +394,7 @@ button,
 html [type="button"], /* 1 */
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; /* 2 */
+  /* 2 */
 }
 
 
@@ -599,6 +599,15 @@ input[type="url"],
 
 
 .bg-fixed { background-position: fixed;}
+
+
+.no-repeat {background-repeat: no-repeat;}
+
+
+.center {background-position: center;}
+
+
+.bg-50 {background-size: 50%;}
 
 
 @media screen and (min-width: 40em) {

@@ -5,8 +5,8 @@
   height: 100%;
   right: 0;
   top: 0;
-  z-index: 3;
-  background: white;
+  z-index: 9;
+  background: #000;
   border-radius: 1px;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
   transform: translateX(100%);
@@ -48,7 +48,7 @@
   right: 9px;
   top: 8px;
   font-size: 35px;
-  color: #000;
+  color: #fff;
   border: none;
   background: transparent;
   transition: transform 100ms ease;
@@ -57,7 +57,7 @@
 
 .btn--close:hover {
   transform: scale(1.2);
-  color: darken(#000, 5%);
+  color: darken(#fff, 5%);
 }
 
 .cart-form {
@@ -155,7 +155,7 @@
 }
 
 .cart-item__quantity {
-  color: black;
+  color: #fff;
   width: 38px;
   height: 21px;
   font-size: inherit;
@@ -208,7 +208,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .cart-discount-notice {
-  color: #000;
+  color: #fff;
   margin-bottom: 10px;
 }
 
@@ -219,7 +219,7 @@ input[type=number]::-webkit-outer-spin-button {
 .pricing {
   margin-left: 5px;
   font-size: 16px;
-  color: black;
+  color: #fff;
 }
 
 .visuallyhidden {
@@ -231,7 +231,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .cartHeader {
-  color: #000;
+  color: #fff;
   float: left;
   margin-top: 0;
   line-height: 39px;

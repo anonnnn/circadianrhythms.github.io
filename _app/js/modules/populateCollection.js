@@ -31,20 +31,24 @@ module.exports = function () {
       }
       $(item + ' .fotorama').fotorama({
           data: imageData,
-          nav: false
+          nav: false,
+          spinner: {
+            lines: 13,
+            color: 'rgba(0, 0, 0, 0)'
+          }
       });
 
       //Create Thumbs
-      for (i=0; i < imageCount; i++) {
-          if (i == 0) {
-            var cx = "thumbnail thumbnail-active";
-          } else {
-            var cx = "thumbnail";
-          }
-        $(item + ' .thumbnails').append(
-          '<a class="'+cx+'" data-parent="'+item+'" data-id="'+i+'"></a>'
-        );
-      }
+      // for (i=0; i < imageCount; i++) {
+      //     if (i == 0) {
+      //       var cx = "thumbnail thumbnail-active";
+      //     } else {
+      //       var cx = "thumbnail";
+      //     }
+      //   $(item + ' .thumbnails').append(
+      //     '<a class="'+cx+'" data-parent="'+item+'" data-id="'+i+'"></a>'
+      //   );
+      // }
     }
 
     //Thumbnail event click

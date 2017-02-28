@@ -4,15 +4,16 @@
   {% assign textColour = 'black' %}
 {% endif %}
 
-<div id='item-{{include.id}}' class="collectionItem w-50 pa5 fl">
+<div id='item-{{include.id}}' class="collectionItem w-100 w-50-ns pa4 pa5-ns fl">
   <div class="w-100">
 
   </div>
 
   <div class="w-100 relative">
-    <div class="fotorama"
+    <div class="fotorama center no-repeat" style="background-size: 40px; background-image: url('assets/images/loading2.gif');"
       data-auto="false"
-      data-width="100%"
+      data-width="1000"
+      data-height="1500"
       data-minwidth="100%"
       data-maxwidth="100%"
       data-minheight="100%"
@@ -21,6 +22,7 @@
       data-loop="true"
       nav="false"
     >
+
     </div>
     <div class="top-1 right-1 thumbnails absolute"></div>
     <a class="pa3 btn-arrow btn-next bg-white absolute top-50 right-1 ml4" data-productID="{{include.id}}">

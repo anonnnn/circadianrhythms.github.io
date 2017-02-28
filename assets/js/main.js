@@ -1561,10 +1561,12 @@ module.exports = function () {
   var cart;
   var cartLineItemCount;
   if(localStorage.getItem('lastCartId')) {
-    $('.btn-cart').removeClass('dn');
     client.fetchCart(localStorage.getItem('lastCartId')).then(function(remoteCart) {
       cart = remoteCart;
       cartLineItemCount = cart.lineItems.length;
+      if (cartLineItemCount > 0 ) {
+        $('.btn-cart').removeClass('dn');
+      }
       renderCartItems();
     });
   } else {
@@ -1827,11 +1829,11 @@ function attachOnVariantSelectListeners(product) {
   ============================================================
   ============================================================ */
   function attachBuyButtonListeners(product) {
-    console.log(product)
     var el = document.getElementById(product.id);
     $(el).on('click', function (event) {
       event.preventDefault();
       var id = product.selectedVariant.id;
+      $('.btn-cart').removeClass('dn');
       addVariantToCart(product.selectedVariant, 1);
     });
   }

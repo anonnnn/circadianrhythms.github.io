@@ -1583,6 +1583,7 @@ module.exports = function () {
     var selectedVariants = [];
 
   $('.buy-button').each(function(){
+    console.log('buy');
     var id = $(this).attr('data-id');
     ids.push(id);
   }).promise().done( function(){
@@ -1831,6 +1832,7 @@ function attachOnVariantSelectListeners(product) {
   function attachBuyButtonListeners(product) {
     var el = document.getElementById(product.id);
     $(el).on('click', function (event) {
+      console.log('click');
       event.preventDefault();
       var id = product.selectedVariant.id;
       $('.btn-cart').removeClass('dn');

@@ -10,7 +10,9 @@ var height = require('./modules/height');
 var fullwidthvideowrapper = require('./modules/full-width-video-wrapper');
 var nProgress = require('./lib/nProgress');
 var imageLoading = require('./modules/imageLoading');
+var videoBg = require('./lib/jquery.videoBackground.js');
 
+videoBg();
 lightYoutubeEmbeds();
 waypoints();
 fotorama();

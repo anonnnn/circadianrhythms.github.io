@@ -18,6 +18,7 @@
 .no-repeat {background-repeat: no-repeat;}
 .center {background-position: center;}
 .bg-50 {background-size: 50%;}
+.bg-75 {background-size: 75%;}
 @media screen and (min-width: 48em) {
   .cover-ns { background-size: cover; }
   .contain-ns { background-size: contain; }

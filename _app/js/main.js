@@ -11,6 +11,7 @@ var fullwidthvideowrapper = require('./modules/full-width-video-wrapper');
 var nProgress = require('./lib/nProgress');
 var imageLoading = require('./modules/imageLoading');
 var videoBg = require('./lib/jquery.videoBackground.js');
+var countdown = require('./lib/countdown.js');
 
 videoBg();
 lightYoutubeEmbeds();
@@ -24,5 +25,6 @@ populateCollection();
 fullwidthvideowrapper();
 nProgress();
 imageLoading();
+countdown();
 
 

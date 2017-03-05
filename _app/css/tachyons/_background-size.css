@@ -24,6 +24,7 @@
   .no-repeat {background-repeat: no-repeat;}
   .center {background-position: center;}
   .bg-50 {background-size: 50%;}
+  .bg-75 {background-size: 75%;}
 
 @media (--breakpoint-not-small) {
   .cover-ns { background-size: cover; }

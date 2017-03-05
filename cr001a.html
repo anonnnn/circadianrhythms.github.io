@@ -51,17 +51,17 @@ layout: default
 </div>
 
 <div id="cr001-menu" class="menu fixed top-50 left-1 z-2">
-  <div>
-    <a href="" class="menu-link f4 o-100 white no-underline" id="menu-link-cr001-a">CR001-A</a>
+  <div class="f6 stch mb2">
+    <a href="" class="menu-link o-100 white no-underline" id="menu-link-cr001-a">CR001-A</a>
   </div>
-  <div>
-    <a href="" class="menu-link f4 o-30 white no-underline" id="menu-link-cr001-b">CR001-B</a>
+  <div class="f6 stch mb2">
+    <a href="" class="menu-link o-30 white no-underline" id="menu-link-cr001-b">CR001-B</a>
   </div>
-  <div>
-    <a href="" class="menu-link f4 o-30 white no-underline" id="menu-link-cr001-c">CR001-C</a>
+  <div class="f6 stch mb2">
+    <a href="" class="menu-link o-30 white no-underline" id="menu-link-cr001-c">CR001-C</a>
   </div>
-  <div>
-    <a href="" class="menu-link f4 o-30 white no-underline mb3 mb0-ns" id="menu-link-cr001-d">CR001-D</a>
+  <div class="f6 stch mb2">
+    <a href="" class="menu-link o-30 white no-underline mb3 mb0-ns" id="menu-link-cr001-d">CR001-D</a>
   </div>
 </div>
 
@@ -93,55 +93,67 @@ layout: default
     </div>
   </div>
 
-  <div class="h-100" id="cr001-b">
-    <div class="w-80 h-100 mx-auto">
-      <div class="flex items-center h-100 w-100 light-video-embed-wrapper relative">
-
-        <div class="w-100">
-          <div class="light-video-embed w-100" data-id="203728529">
-            <img src="assets/images/cr001/cr001-teaser-poster.png" />
-            <div class="play"></div>
-          </div>
-            <div class="small ttu mt3">Director — Romain Sumthing</div>
-        </div>
+  <div class="h-100 w-100 no-repeat center bg-75" style="background-image: url('assets/images/cr001/cr001-teaser-poster.png')" id="cr001-b">
+    <div class="flex items-center h-100 w-100">
+      <div class="w-50-ns mx-auto tc">
+        <div class="ttu" id="cr001b-countdown"></div>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $('#cr001b-countdown')
+            .countdown('2017/03/10', function(event) {
+              $(this).text(
+                event.strftime('%D:%H:%M:%S')
+              );
+            });
+          });
+        </script>
+        <div class="f6 stch stch-c">METAL VIDEO</div>
       </div>
     </div>
   </div>
 
-
-  <div class="h-auto fl relative cb w-100" id="cr001-c">
-    <div class="overflow-hidden">
-      <img id="img0" class="db ma0 w-100"/>
-      <img id="img1" class="db ma0"/>
-      <img id="img2" class="db ma0" />
-      <img id="img3" class="db ma0" />
-      <img id="img4" class="db ma0" />
-      <img id="img5" class="db ma0" />
-      <img id="img6" class="db ma0" />
-    </div>
-    <div class="overflow-hidden">
-      {% include cr001/item.html colour='black' id='9140622541' %}
-      {% include cr001/item.html colour='white' id='9140629261' %}
-      {% include cr001/item.html colour='black' id='9140651149' %}
-      {% include cr001/item.html colour='white' id='9140712909' %}
-      {% include cr001/item.html colour='black' id='9140762061' %}
-      {% include cr001/item.html colour='white' id='9140780429' %}
-
+  <div class="h-100 w-100 contain no-repeat center" style="background-image: url('assets/images/cr001/cr001-c-teaser-bg.png')" id="cr001-c">
+    <div class="flex items-center h-100 w-100">
+      <div class="w-50-ns mx-auto tc">
+        <div class="ttu" id="cr001c-countdown"></div>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $('#cr001c-countdown')
+            .countdown('2017/03/17', function(event) {
+              $(this).text(
+                event.strftime('%D:%H:%M:%S')
+              );
+            });
+          });
+        </script>
+        <div class="f6 stch stch-c">METAL COLLECTION</div>
+      </div>
     </div>
   </div>
 
   <div class="h-100-js-ns w-100 bg-cover fl cb" id="cr001-d">
-    <div class="w-60 mx-auto h-100 flex items-center">
-      <div>
-        <div class="f1">10.03.17</div>
-        <div class="f1">CR001</div>
-        <div class="f1">@ SUM VENUE 10-3AM</div>
-        <div class="f1">SUMGUY SUMNAME</div>
-        <div class="f1">DJ MAYBE</div>
-        <div class="f1">DAVID GUETTA</div>
-        <div>
-          <a class="btn btn-outline pa3 mt4 dib">BUY TICKETS</a>
+    <div class="w-50 mx-auto h-150 flex items-center tc">
+      <div class="w-100">
+        <div class="ttu" id="cr001d-countdown"></div>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $('#cr001d-countdown')
+            .countdown('2017/03/17', function(event) {
+              $(this).text(
+                event.strftime('%D:%H:%M:%S')
+              );
+            });
+          });
+        </script>
+        <div class="f6 stch stch-c">CAPO LEE</div>
+        <div class="f6 stch stch-c">PRYNCE MINI</div>
+        <div class="f6 stch stch-c">K9</div>
+        <div class="f6 stch stch-c">KILLA P</div>
+        <div class="f6 stch stch-c">SLOWTHAI</div>
+        <div class="mt2">
+          <img width="50" height="50" src="assets/images/NTS-logo.png" />
         </div>
+
       </div>
     </div>
   </div>

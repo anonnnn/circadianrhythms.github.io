@@ -610,6 +610,9 @@ input[type="url"],
 .bg-50 {background-size: 50%;}
 
 
+.bg-75 {background-size: 75%;}
+
+
 @media screen and (min-width: 48em) {
   .cover-ns { background-size: cover; }
   .contain-ns { background-size: contain; }
@@ -6024,8 +6027,30 @@ body {
 }
 
 
-.f1, .f2, .f3, .f4, .f5 {
+.f1, .f2, .f3, .f4, .f5, .f6 {
   font-family: 'Druk-WideMedium';
+}
+
+
+.stch {
+    /*display:inline-block;*/
+  -webkit-transform:scale(3,1); /* Safari and Chrome */
+  -moz-transform:scale(3,1); /* Firefox */
+  -ms-transform:scale(3,1); /* IE 9 */
+  -o-transform:scale(3,1); /* Opera */
+  transform:scale(3,1); /* W3C */
+  transform-origin: left center;
+}
+
+
+.stch-c {
+  transform-origin: center;
+}
+
+
+.f6 {
+  font-size: 10px;
+  margin: 5px 0 5px 0;
 }
 
 

@@ -676,6 +676,7 @@ module.exports = function() {
         $('.video-background').videobackground({
           videoSource: [['assets/images/crwave.mp4', 'video/mp4']],
           controlPosition: '#main',
+          poster: 'assets/images/cr001/videoposter.jpg',
           loop: true,
           resize: false,
           loadedCallback: function() {

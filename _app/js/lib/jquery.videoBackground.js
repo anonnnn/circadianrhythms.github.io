@@ -420,6 +420,7 @@ module.exports = function() {
           resize: false,
           loadedCallback: function() {
             $(this).videobackground('mute');
+            $(this).fadeIn();
           }
         });
   });

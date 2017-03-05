@@ -388,6 +388,7 @@ module.exports = function() {
      */
     if (that.settings.loop) {
       that.find('video').on('ended', function () {
+        console.log('ended')
         $(this).get(0).play();
         $(this).toggleClass('paused').text(that.settings.controlText[1]);
       });
@@ -678,6 +679,7 @@ module.exports = function() {
           controlPosition: '#main',
           loop: true,
           resize: false,
+          autoplay: true,
           loadedCallback: function() {
             $(this).videobackground('mute');
             $(this).fadeIn();

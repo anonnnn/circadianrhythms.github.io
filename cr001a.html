@@ -41,16 +41,16 @@ layout: default
 </div>
 
 <div id="cr001-menu" class="menu fixed top-50 left-1 z-2">
-  <div class="f6 stch mb2">
+  <div class="f5 mb2">
     <a href="" class="menu-link o-100 white no-underline" id="menu-link-cr001-a">CR001-A</a>
   </div>
-  <div class="f6 stch mb2">
+  <div class="f5 mb2">
     <a href="" class="menu-link o-30 white no-underline" id="menu-link-cr001-b">CR001-B</a>
   </div>
-  <div class="f6 stch mb2">
+  <div class="f5 mb2">
     <a href="" class="menu-link o-30 white no-underline" id="menu-link-cr001-c">CR001-C</a>
   </div>
-  <div class="f6 stch mb2">
+  <div class="f5 mb2">
     <a href="" class="menu-link o-30 white no-underline mb3 mb0-ns" id="menu-link-cr001-d">CR001-D</a>
   </div>
 </div>
@@ -64,21 +64,19 @@ layout: default
     </div>
   </div>
 
-  <div class="h-100" id="cr001-a">
-    <!-- <div class="w-100 h-100 bg-black o-60 absolute z-0"></div> -->
-    <div class="h-100 flex items-center justify-center px3 relative z-1">
+  <div id="cr001-a">
+    <div class="h-100 flex items-center justify-center ph3 mv5 relative z-1">
       <div class="w-100 w-40-ns mh4">
-          <img class="w-100" src="assets/images/cr001/cr001-a-artwork.png" />
-          <div class="fl mt2">
-            <div class="small ttu">TOASTY—METAL</div>
-            <div class="small ttu">A. METAL / B1. REBAR / B2. BUMP</div>
-            <div class="small ttu">Full colour 12" Vinyl</div>
-            <div class="small ttu">Artwork Dylan Tushar</div>
-
+        <img class="db ma0 w-100" src="assets/images/cr001/cr001-a-artwork.png" />
+        <div class="pa4 w-100 bg-white black fl relative ">
+          <h3 class="itemTitle f5 mt0 mb1 text ttu w-100" >TOASTY—METAL</h3>
+          <div class="itemDescription mt3 smallcaps o-70">A. METAL / B1. REBAR / B2. BUMP</div>
+          <div class="itemDescription smallcaps o-70">Full colour 12" Vinyl</div>
+          <div class="itemDescription smallcaps o-70">Artwork Dylan Tushar</div>
+          <div class="mt3">
+            <a id="{{ include.id }}" data-id="{{ include.id }}" class="buy-button btn btn-black btn-block btn-outline">Buy vinyl</a>
           </div>
-          <div class="fr mt3">
-            <a class="btn btn-outline pa3 buy-button white" id="9208436301" data-id="9208436301">BUY VINYL</a>
-          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -97,7 +95,7 @@ layout: default
             });
           });
         </script>
-        <div class="f6 stch stch-c">METAL VIDEO</div>
+        <div class="f5">VIDEO</div>
       </div>
     </div>
   </div>
@@ -116,13 +114,13 @@ layout: default
             });
           });
         </script>
-        <div class="f6 stch stch-c">METAL COLLECTION</div>
+        <div class="f5">COLLECTION</div>
       </div>
     </div>
   </div>
 
   <div class="h-100-js-ns w-100 bg-cover fl cb" id="cr001-d">
-    <div class="w-50 mx-auto h-150 flex items-center tc">
+    <div class="w-50 mx-auto h-100 flex items-center tc">
       <div class="w-100">
         <div class="ttu" id="cr001d-countdown"></div>
         <script type="text/javascript">
@@ -135,11 +133,11 @@ layout: default
             });
           });
         </script>
-        <div class="f6 stch stch-c">CAPO LEE</div>
-        <div class="f6 stch stch-c">PRYNCE MINI</div>
-        <div class="f6 stch stch-c">K9</div>
-        <div class="f6 stch stch-c">KILLA P</div>
-        <div class="f6 stch stch-c">SLOWTHAI</div>
+        <div class="f5">?????</div>
+        <div class="f5">?????</div>
+        <div class="f5">?????</div>
+        <div class="f5">?????</div>
+        <div class="f5">?????</div>
         <div class="mt2">
           <img width="50" height="50" src="assets/images/NTS-logo.png" />
         </div>
@@ -177,7 +175,7 @@ layout: default
 
   <!-- .cart-section begin // cart header -->
   <div class="cart-section cart-section--top">
-    <h2 class="cartHeader f6 stch mt0">BASKET</h2>
+    <h2 class="cartHeader f5 stch mt0">BASKET</h2>
     <button class="btn--close">
       <span aria-role="hidden">×</span>
       <span class="visuallyhidden">Close</span>

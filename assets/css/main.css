@@ -5932,6 +5932,11 @@ body {
 }
 
 
+.pe-none {
+  pointer-events: none;
+}
+
+
 html {
   height: 100%;
 }

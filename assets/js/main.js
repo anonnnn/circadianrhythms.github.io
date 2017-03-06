@@ -2019,7 +2019,11 @@ module.exports = function() {
         scrollToContent('#cr001-d');
       }
     });
+
+    $('body').on('scroll', function(){Waypoint.refreshAll();});
+
   });
+
 }
 
 },{}],9:[function(require,module,exports){
@@ -2269,7 +2273,6 @@ module.exports = function () {
     var selectedVariants = [];
 
   $('.buy-button').each(function(){
-    console.log('buy');
     var id = $(this).attr('data-id');
     ids.push(id);
   }).promise().done( function(){
@@ -2283,7 +2286,6 @@ module.exports = function () {
         }
 
         selectedVariants.push(products[index].selectedVariant);
-        console.log('product', products[index].selectedVariant)
         var variantSelectors = generateSelectors(products[index]);
         $('.variant-selectors').html(variantSelectors);
         attachBuyButtonListeners(products[index]);
@@ -2366,8 +2368,6 @@ function attachOnVariantSelectListeners(product) {
     product.options.filter(function(option) {
       return option.name === name;
     })[0].selected = value;
-
-    console.log('product', product)
     var selectedVariant = product.selectedVariant;
     var selectedVariantImage = product.selectedVariantImage;
     updateProductTitle(product.title);
@@ -2486,7 +2486,6 @@ function attachOnVariantSelectListeners(product) {
       $('.cart').on('click', '.quantity-decrement', function() {
         var variantId = parseInt($(this).attr('data-variant-id'), 10);
         var variant = selectedVariants.filter(function (variant) {
-          console.log(variant.id, variantId)
           return (variant.id === variantId);
         })[0];
 
@@ -2518,7 +2517,6 @@ function attachOnVariantSelectListeners(product) {
   function attachBuyButtonListeners(product) {
     var el = document.getElementById(product.id);
     $(el).on('click', function (event) {
-      console.log('click');
       event.preventDefault();
       var id = product.selectedVariant.id;
       $('.btn-cart').removeClass('dn');

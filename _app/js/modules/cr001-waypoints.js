@@ -95,5 +95,9 @@ module.exports = function() {
         scrollToContent('#cr001-d');
       }
     });
+
+    $('body').on('scroll', function(){Waypoint.refreshAll();});
+
   });
+
 }

@@ -89,8 +89,14 @@ layout: default
         <div class="ttu" id="cr001b-countdown"></div>
         <script type="text/javascript">
           $(document).ready(function() {
+            var d = new Date();
+            d.setHours("11");
+            d.setMinutes("00");
+            d.setDate("10");
+            d.setMonth("02");
+            d.setYear("2017");
             $('#cr001b-countdown')
-            .countdown('2017/03/10', function(event) {
+            .countdown(d, function(event) {
               $(this).text(
                 event.strftime('%D:%H:%M:%S')
               );
@@ -108,8 +114,15 @@ layout: default
         <div class="ttu" id="cr001c-countdown"></div>
         <script type="text/javascript">
           $(document).ready(function() {
+                        var d = new Date();
+
+            d.setHours("11");
+            d.setMinutes("00");
+            d.setDate("17");
+            d.setMonth("02");
+            d.setYear("2017");
             $('#cr001c-countdown')
-            .countdown('2017/03/17', function(event) {
+            .countdown(d, function(event) {
               $(this).text(
                 event.strftime('%D:%H:%M:%S')
               );
@@ -127,8 +140,15 @@ layout: default
         <div class="ttu" id="cr001d-countdown"></div>
         <script type="text/javascript">
           $(document).ready(function() {
+                        var d = new Date();
+
+            d.setHours("11");
+            d.setMinutes("00");
+            d.setDate("17");
+            d.setMonth("02");
+            d.setYear("2017");
             $('#cr001d-countdown')
-            .countdown('2017/03/17', function(event) {
+            .countdown(d, function(event) {
               $(this).text(
                 event.strftime('%D:%H:%M:%S')
               );

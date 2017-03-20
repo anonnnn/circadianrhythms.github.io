@@ -41,3 +41,7 @@
   cursor: pointer;
 }
 
+.itemDescription ul {
+  padding-left: 20px;
+}
+

@@ -6517,3 +6517,8 @@ transition: all 500ms linear;
   cursor: pointer;
 }
 
+
+.itemDescription ul {
+  padding-left: 20px;
+}
+

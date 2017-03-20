@@ -1,0 +1,24 @@
+  <div class="h-100 w-100 no-repeat center bg-75" style="background-image: url('assets/images/cr001/cr001-teaser-poster.png')" id="cr001-b">
+    <div class="flex items-center h-100 w-100">
+      <div class="w-50-ns mx-auto tc">
+        <div class="ttu" id="cr001b-countdown"></div>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            var d = new Date();
+            d.setHours("11");
+            d.setMinutes("00");
+            d.setDate("21");
+            d.setMonth("02");
+            d.setYear("2017");
+            $('#cr001b-countdown')
+            .countdown(d, function(event) {
+              $(this).text(
+                event.strftime('%D:%H:%M:%S')
+              );
+            });
+          });
+        </script>
+        <div class="f5">VIDEO</div>
+      </div>
+    </div>
+  </div>

@@ -6419,6 +6419,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
+.btn-disabled {
+  opacity: .6;
+}
+
+
 .bg-g-black-to-trans {
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+51,000000+100&0.9+51,0+100 */
 background: -moz-linear-gradient(top,  rgba(0,0,0,0.9) 51%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
@@ -6496,3 +6501,14 @@ transition: all 500ms linear;
   min-height: 100%;
   min-width:100%;
 }
+
+
+.light-video-embed-wrapper {
+    position: relative;
+    padding-bottom: 56.23%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 100px 0 0 0;
+}
+

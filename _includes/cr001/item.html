@@ -37,7 +37,12 @@
       <div class="o-60">ONE SIZE  </div>
       <div class="itemDescription mt3 smallcaps o-70" style="height: 60px;"></div>
       <div>
-        <a id="{{ include.id }}" data-id="{{ include.id }}" class="buy-button btn btn-black btn-block btn-outline">Buy</a>
+
+        {% if include.soldout == 'true' %}
+          <a class="buy-button btn btn-black btn-block btn-outline btn-disabled">Sold out</a>
+        {% else %}
+          <a id="{{ include.id }}" data-id="{{ include.id }}" class="buy-button btn btn-black btn-block btn-outline">Buy</a>
+        {% endif %}
       </div>
   </div>
 </div>

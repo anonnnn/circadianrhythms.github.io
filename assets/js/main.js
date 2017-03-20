@@ -2186,10 +2186,10 @@ module.exports = function () {
 
         var size = fotorama.size;
         var activeFrameIndex = fotorama.activeFrame.i;
-        if (size == activeFrameIndex) {
-          $(this).addClass('btn-arrow-inactive');
-        }
-        $(item + ' .btn-prev').removeClass('btn-arrow-inactive');
+        // if (size == activeFrameIndex) {
+        //   $(this).addClass('btn-arrow-inactive');
+        // }
+        // $(item + ' .btn-prev').removeClass('btn-arrow-inactive');
       }
     });
 
@@ -2203,12 +2203,12 @@ module.exports = function () {
         var fotorama = $fotoramaDiv.data('fotorama');
         fotorama.show('<');
 
-        var size = fotorama.size;
-        var activeFrameIndex = fotorama.activeFrame.i;
-        if (activeFrameIndex == 1) {
-          $(this).addClass('btn-arrow-inactive');
-        }
-        $(item + ' .btn-next').removeClass('btn-arrow-inactive');
+        // var size = fotorama.size;
+        // var activeFrameIndex = fotorama.activeFrame.i;
+        // if (activeFrameIndex == 1) {
+        //   $(this).addClass('btn-arrow-inactive');
+        // }
+        // $(item + ' .btn-next').removeClass('btn-arrow-inactive');
       }
     });
 

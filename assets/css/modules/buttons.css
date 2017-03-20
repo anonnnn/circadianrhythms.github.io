@@ -54,3 +54,6 @@
 .bg-black .btn-arrow-inactive {
   opacity: .2;
 }
+.btn-disabled {
+  opacity: .6;
+}

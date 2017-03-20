@@ -12,6 +12,8 @@ var nProgress = require('./lib/nProgress');
 var imageLoading = require('./modules/imageLoading');
 var videoBg = require('./lib/jquery.videoBackground.js');
 var countdown = require('./lib/countdown.js');
+var sc = require('./lib/sc.js');
+var soundcloud = require('./modules/soundcloud.js');
 
 videoBg();
 lightYoutubeEmbeds();
@@ -26,5 +28,7 @@ fullwidthvideowrapper();
 nProgress();
 imageLoading();
 countdown();
+sc();
+soundcloud();
 
 

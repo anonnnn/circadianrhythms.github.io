@@ -6512,3 +6512,8 @@ transition: all 500ms linear;
     margin: 100px 0 0 0;
 }
 
+
+.cursor-pointer {
+  cursor: pointer;
+}
+

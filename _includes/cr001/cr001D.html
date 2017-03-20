@@ -1,0 +1,35 @@
+<div class="h-100-js-ns w-100 bg-cover fl cb" id="cr001-d">
+  <div class="w-50 mx-auto h-100 flex items-center tc">
+    <div class="w-100">
+      <div class="ttu" id="cr001d-countdown"></div>
+      <script type="text/javascript">
+        $(document).ready(function() {
+                      var d = new Date();
+
+          d.setHours("11");
+          d.setMinutes("00");
+          d.setDate("22");
+          d.setMonth("02");
+          d.setYear("2017");
+          $('#cr001d-countdown')
+          .countdown(d, function(event) {
+            $(this).text(
+              event.strftime('%D:%H:%M:%S')
+            );
+          });
+        });
+      </script>
+      <div class="f5">SLOWTHAI</div>
+      <div class="f5">KILLA P</div>
+      <div class="f5">PRYNCE MINI</div>
+      <div class="f5">K9</div>
+      <div class="mt3">
+
+        <img width="150" src="assets/images/cr001/crxnts.svg" />
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

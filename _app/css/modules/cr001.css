@@ -1,3 +1,7 @@
+@custom-media --breakpoint-not-small screen and (min-width: 48em);
+@custom-media --breakpoint-medium screen and (min-width: 48em) and (max-width: 64em);
+@custom-media --breakpoint-large screen and (min-width: 64em);
+
 .cr001-logo {
   top: -1000px;
 -webkit-transition: all 500ms linear;
@@ -41,4 +45,17 @@ transition: all 500ms linear;
 #cr001-bg {
   opacity: 0;
   transition: opacity 1500ms ease-in-out;
+}
+
+.menu-link,
+#cr001-menu,
+#cr001-menu > div {
+  pointer-events: none;
+}
+@media (--breakpoint-not-small) {
+  .menu-link,
+  #cr001-menu,
+  #cr001-menu > div {
+    pointer-events: auto;
+  }
 }

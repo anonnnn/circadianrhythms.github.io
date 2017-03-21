@@ -6486,6 +6486,22 @@ transition: all 500ms linear;
 }
 
 
+.menu-link,
+#cr001-menu,
+#cr001-menu > div {
+  pointer-events: none;
+}
+
+
+@media screen and (min-width: 48em) {
+  .menu-link,
+  #cr001-menu,
+  #cr001-menu > div {
+    pointer-events: auto;
+  }
+}
+
+
 .video-background {
   position: fixed;
   top: 0;
@@ -6521,4 +6537,3 @@ transition: all 500ms linear;
 .itemDescription ul {
   padding-left: 20px;
 }
-

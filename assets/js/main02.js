@@ -1926,7 +1926,6 @@ nProgress();
 imageLoading();
 countdown();
 sc();
-
 soundcloud();
 
 
@@ -2128,7 +2127,6 @@ module.exports = function () {
     });
 
     var populate = function ( product ) {
-      console.log('product', product)
       var item = '#item-' + product.id;
       $(item).find('.itemTitle').append( product.title );
       $(item).find( '.itemPrice' ).append( product.formattedPrice );
@@ -2203,7 +2201,7 @@ module.exports = function () {
         // if (size == activeFrameIndex) {
         //   $(this).addClass('btn-arrow-inactive');
         // }
-        // $(item + ' .btn-prev').removeClass('btn-arrow-inactive');
+        $(item + ' .btn-prev').removeClass('btn-arrow-inactive');
       }
     });
 
@@ -2222,7 +2220,7 @@ module.exports = function () {
         // if (activeFrameIndex == 1) {
         //   $(this).addClass('btn-arrow-inactive');
         // }
-        // $(item + ' .btn-next').removeClass('btn-arrow-inactive');
+        $(item + ' .btn-next').removeClass('btn-arrow-inactive');
       }
     });
 

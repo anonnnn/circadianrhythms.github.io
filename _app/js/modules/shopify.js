@@ -276,10 +276,12 @@ function attachOnVariantSelectListeners(product) {
   function attachBuyButtonListeners(product) {
     var el = document.getElementById(product.id);
     $(el).on('click', function (event) {
-      event.preventDefault();
-      var id = product.selectedVariant.id;
-      $('.btn-cart').removeClass('dn');
-      addVariantToCart(product.selectedVariant, 1);
+      if (!$(this).hasClass('btn-disabled')) {
+        event.preventDefault();
+        var id = product.selectedVariant.id;
+        $('.btn-cart').removeClass('dn');
+        addVariantToCart(product.selectedVariant, 1);
+      }
     });
   }
 

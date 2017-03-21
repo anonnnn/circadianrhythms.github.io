@@ -133,11 +133,8 @@ gulp.task('scripts', function() {
         this.emit("end");
     })
     .pipe(source("appJsFilesGlob"))
-    .pipe(rename('main.js'))
+    .pipe(rename('main02.js'))
     .pipe(gulp.dest('assets/js'))
-
-
-
 });
 
 // Runs Jekyll build

@@ -1,27 +1,47 @@
 <div class="h-100-js-ns w-100 bg-cover fl cb" id="cr001-d">
   <div class="w-50 mx-auto h-100 flex items-center tc">
     <div class="w-100">
-      <div class="ttu" id="cr001d-countdown"></div>
-      <script type="text/javascript">
-        $(document).ready(function() {
-                      var d = new Date();
 
-          d.setHours("11");
-          d.setMinutes("00");
-          d.setDate("23");
-          d.setMonth("02");
-          d.setYear("2017");
-          $('#cr001d-countdown')
-          .countdown(d, function(event) {
-            $(this).text(
-              event.strftime('%D:%H:%M:%S')
-            );
-          });
+      <img src="assets/images/cr001/lineup.svg" class="mb3"/>
+
+      <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '{133862413742331}',
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+
+      // Get Embedded Video Player API Instance
+      var my_video_player;
+      FB.Event.subscribe('xfbml.ready', function(msg) {
+        if (msg.type === 'video') {
+          my_video_player = msg.instance;
+        }
+            var iframeElement   = document.getElementById('scToasty');
+
+        var scPlayer         = SC.Widget(iframeElement);
+        var myEventHandler = my_video_player.subscribe('startedPlaying', function(e) {
+          console.log('Video started playing')
+          scPlayer.pause();
         });
-      </script>
-      <img src="assets/images/cr001/lineup.svg"/>
-      <div class="mt3">
+      });
 
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+  </script>
+
+      <div class="fb-video" id="fbvid" data-href="https://www.facebook.com/ntsradiolive/videos/10158452524010444/" data-width="500" data-show-text="false"><blockquote cite="https://www.facebook.com/ntsradiolive/videos/10158452524010444/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ntsradiolive/videos/10158452524010444/"></a><p>LIVE for the next 50 mins for the Circadian Rhythms CR001 Launch feat. K9 , KILLA P, Prynce MINI &amp; slowthai...</p>Posted by <a href="https://www.facebook.com/ntsradiolive/">NTS Radio</a> on Thursday, March 23, 2017</blockquote></div>
+    <div class="mt3">
         <img width="150" src="assets/images/cr001/crxnts.svg" />
       </div>
 

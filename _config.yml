@@ -21,6 +21,8 @@ markdown: kramdown
 collections:
 - radio
 
+permalink: pretty
+
 exclude:
 - _app
 - Gemfile

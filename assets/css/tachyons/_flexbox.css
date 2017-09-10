@@ -17,6 +17,12 @@
   min-width: 0; /* 1 */
   min-height: 0; /* 1 */
 }
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
 .flex-none { flex: none; }
 .flex-column  { flex-direction: column; }
 .flex-row     { flex-direction: row; }

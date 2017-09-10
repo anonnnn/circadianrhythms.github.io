@@ -179,7 +179,7 @@ gulp.task('serve', () => {
 // });
 
 
-gulp.task('default', ['scripts', 'build:images', 'build:fonts', 'build:styles', 'jekyll', 'serve']);
+gulp.task('default', ['scripts', 'build:images', 'build:fonts', 'build:styles', 'jekyll']);
 
 /* Sass and image file changes can be streamed directly to BrowserSync without
 reloading the entire page. Other changes, such as changing JavaScript or

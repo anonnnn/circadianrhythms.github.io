@@ -1,0 +1,43 @@
+.cr002 .gradient-bg {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#30fefc+0,fee230+40,ff0000+50,fee230+60,30fefc+100 */
+background: #30fefc; /* Old browsers */
+background: -moz-linear-gradient(left, #30fefc 0%, #fee230 40%, #ff0000 50%, #fee230 60%, #30fefc 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #30fefc 0%,#fee230 40%,#ff0000 50%,#fee230 60%,#30fefc 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #30fefc 0%,#fee230 40%,#ff0000 50%,#fee230 60%,#30fefc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30fefc', endColorstr='#30fefc',GradientType=1 ); /* IE6-9 */
+
+}
+
+@-webkit-keyframes MOVE-BG {
+  from {
+    -webkit-transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-187%);
+  }
+}
+
+.pollution div {
+      -webkit-animation-name: MOVE-BG;
+  -webkit-animation-duration: 10000s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.pollution2 div {
+      -webkit-animation-name: MOVE-BG;
+  -webkit-animation-duration: 10000s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+-webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+    animation-direction: alternate;
+}
+
+.pollution2 div,
+.pollution div {
+  background-size: 100%;
+}
+
+.pointer-none {
+  pointer-events: none;
+}

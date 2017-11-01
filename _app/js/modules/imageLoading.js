@@ -7,13 +7,13 @@ module.exports = function () {
   });
 
   var imgAddresses = [
-    'assets/images/cr001/cr001-c/cr001c-0.png',
-    'assets/images/cr001/cr001-c/cr001c-1.jpg',
-    'assets/images/cr001/cr001-c/cr001c-2.jpg',
-    'assets/images/cr001/cr001-c/cr001c-3.jpg',
-    'assets/images/cr001/cr001-c/cr001c-4.jpg',
-    'assets/images/cr001/cr001-c/cr001c-5.jpg',
-    'assets/images/cr001/cr001-c/cr001c-6.jpg',
+    '/assets/images/cr001/cr001-c/cr001c-0.png',
+    '/assets/images/cr001/cr001-c/cr001c-1.jpg',
+    '/assets/images/cr001/cr001-c/cr001c-2.jpg',
+    '/assets/images/cr001/cr001-c/cr001c-3.jpg',
+    '/assets/images/cr001/cr001-c/cr001c-4.jpg',
+    '/assets/images/cr001/cr001-c/cr001c-5.jpg',
+    '/assets/images/cr001/cr001-c/cr001c-6.jpg',
   ];
 
   function loadImage(counter) {

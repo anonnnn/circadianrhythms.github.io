@@ -415,7 +415,7 @@ module.exports = function() {
 
   $(document).ready(function() {
         $('.video-background').videobackground({
-          videoSource: [['assets/images/crwave.mp4', 'video/mp4']],
+          videoSource: [['/assets/images/crwave.mp4', 'video/mp4']],
           controlPosition: '#main',
           loop: true,
           resize: false,

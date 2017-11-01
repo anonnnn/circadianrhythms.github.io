@@ -32,12 +32,12 @@ var appFontFiles   = appDir  + fontFolderName;
 // Jekyll files locations
 var jekyllPostFiles    = jekyllDir + postFolderName;
 var jekyllDraftFiles   = jekyllDir + draftFolderName;
-var jekyllImageFiles   = jekyllDir + 'assets/' + imageFolderName;
-var jekyllFontFiles    = jekyllDir + 'assets/' + fontFolderName;
-var jekyllScriptFiles  = siteDir + 'assets/' + scriptFolderName;
-var jekyllScriptFiles2  = jekyllDir + 'assets/' + scriptFolderName;
-var jekyllStyleFiles   = jekyllDir + 'assets/' + stylesFolderName;
-var jekyllStyleFiles2   = siteDir + 'assets/' + stylesFolderName;
+var jekyllImageFiles   = jekyllDir + '/assets/' + imageFolderName;
+var jekyllFontFiles    = jekyllDir + '/assets/' + fontFolderName;
+var jekyllScriptFiles  = siteDir + '/assets/' + scriptFolderName;
+var jekyllScriptFiles2  = jekyllDir + '/assets/' + scriptFolderName;
+var jekyllStyleFiles   = jekyllDir + '/assets/' + stylesFolderName;
+var jekyllStyleFiles2   = siteDir + '/assets/' + stylesFolderName;
 
 // App files globs
 var appCssFilesGlob      = appCssFiles      + cssPattern;
@@ -134,7 +134,7 @@ gulp.task('scripts', function() {
     })
     .pipe(source("appJsFilesGlob"))
     .pipe(rename('main02.js'))
-    .pipe(gulp.dest('assets/js'))
+    .pipe(gulp.dest('/assets/js'))
     .pipe(gulp.dest('_site/assets/js'))
 });
 

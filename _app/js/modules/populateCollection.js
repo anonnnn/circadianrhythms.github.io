@@ -12,6 +12,28 @@ module.exports = function () {
       var item = '#item-' + product.id;
       $(item).find('.itemTitle').append( product.title );
       $(item).find( '.itemPrice' ).append( product.formattedPrice );
+
+      // if has Size variant
+      if ( product.selectedVariant.attrs.product.variants.length > 1 ) {
+        var sizes = product.selectedVariant.attrs.product.variants;
+
+        var select = '<div class="w-100 mb1 mt1"><select name="size" class="genSel">' + sizes.map(function(value) {
+            if (value.available) {
+              return '<option data-id="'+ value.attrs.variant.id +'" value="' + value.attrs.variant.title + '">' + value.attrs.variant.title + '</option>';
+            } else {
+              return '<option data-id="'+ value.attrs.variant.id +'" value="' + value.attrs.variant.title + '" disabled>' + value.attrs.variant.title + '- SOLD OUT</option>';
+            }
+        }) + '</select></div>';
+
+        $(document).ready(function() {
+          var activeVariantId = sizes[0].attrs.variant.id;
+          $(item).find('.buy-button').attr('data-id', activeVariantId).attr('id', activeVariantId);
+        });
+
+         $(item).find( '.itemPrice' ).append(select);
+         $(item + ' .oneSize').hide();
+      }
+
       $(item).find( '.itemDescription' ).append( product.description );
       imageCount = product.images.length;
       imageData = [];
@@ -40,18 +62,6 @@ module.exports = function () {
       if (product.available === false) {
         $(item + ' .buy-button').addClass('btn-disabled').html('SOLD OUT').removeClass('.buy-button');
       }
-
-      //Create Thumbs
-      // for (i=0; i < imageCount; i++) {
-      //     if (i == 0) {
-      //       var cx = "thumbnail thumbnail-active";
-      //     } else {
-      //       var cx = "thumbnail";
-      //     }
-      //   $(item + ' .thumbnails').append(
-      //     '<a class="'+cx+'" data-parent="'+item+'" data-id="'+i+'"></a>'
-      //   );
-      // }
     }
 
     //Thumbnail event click
@@ -104,6 +114,12 @@ module.exports = function () {
         // }
         $(item + ' .btn-next').removeClass('btn-arrow-inactive');
       }
+    });
+
+    // On size select change
+    $('body').on('change', '.genSel', function(sel){
+      var val = $(sel.target).find('option:selected').attr('data-id');
+      $(sel.target).closest('.collectionItem').find('.buy-button').attr('data-id', val).attr('id', val);
     });
 
     $('.collectionItem').each(function(){

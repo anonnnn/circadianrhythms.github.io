@@ -135,6 +135,7 @@ gulp.task('scripts', function() {
     .pipe(source("appJsFilesGlob"))
     .pipe(rename('main02.js'))
     .pipe(gulp.dest('assets/js'))
+    .pipe(gulp.dest('_site/assets/js'))
 });
 
 // Runs Jekyll build

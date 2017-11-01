@@ -56,8 +56,8 @@ module.exports = function () {
         }
 
         selectedVariants.push(products[index].selectedVariant);
-        var variantSelectors = generateSelectors(products[index]);
-        $('.variant-selectors').html(variantSelectors);
+        // var variantSelectors = generateSelectors(products[index]);
+        // $('.variant-selectors').html(variantSelectors);
         attachBuyButtonListeners(products[index]);
         attachOnVariantSelectListeners(products[index]);
       }
@@ -104,7 +104,7 @@ module.exports = function () {
       } else {
         img = lineItem.images[0].src;
       }
-      
+
       $lineItemTemplate.find('.cart-item__title').text(lineItem.title);
       $lineItemTemplate.find('.cart-item__img').html('<img src="'+img+'"/>');
       $lineItemTemplate.find('.cart-item__variant-title').text(lineItem.variant_title);

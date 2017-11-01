@@ -2168,14 +2168,19 @@ module.exports = function () {
         }
         imageData.push(image);
       }
-      $(item + ' .fotorama').fotorama({
-          data: imageData,
-          nav: false,
-          spinner: {
-            lines: 13,
-            color: 'rgba(0, 0, 0, 0)'
-          }
-      });
+
+      if ( $(item).find('.record').length == 0 ) {
+        $(item + ' .fotorama').fotorama({
+            data: imageData,
+            nav: false,
+            spinner: {
+              lines: 13,
+              color: 'rgba(0, 0, 0, 0)'
+            }
+        });
+      } else {
+        $(item + ' .record').html('<img src=' + imageData[0].img +' class="w-100 db ma0"/>')
+      }
 
       if (product.available === false) {
         $(item + ' .buy-button').addClass('btn-disabled').html('SOLD OUT').removeClass('.buy-button');

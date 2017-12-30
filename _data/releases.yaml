@@ -1,0 +1,6 @@
+- name: CR001
+  url: /cr001
+  background: 'http://placehold.it/500x500'
+- name: CR002
+  url: /cr002
+  background: 'http://placehold.it/500x500'

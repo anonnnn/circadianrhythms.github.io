@@ -13,6 +13,7 @@
 
 @import 'modules/cr001.css';
 @import 'modules/cr002.css';
+@import 'modules/archive.css';
 
 .video-background {
   position: fixed;

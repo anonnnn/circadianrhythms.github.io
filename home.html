@@ -1,0 +1,54 @@
+---
+layout: default
+title: Circadian Rhythms
+url: http://circadian-rhythms.com/
+socialTitle: 'CIRCADIAN RHYTHMS'
+socialDesc: 'London based concept label, evolving the delivery of sound'
+socialFBImage: http://circadian-rhythms.com/assets/images/cr002/fb.jpg
+socialTwitterImage: http://circadian-rhythms.com/assets/images/cr002/twitter.jpg
+---
+
+<div class="pa2 pa5-ns archive ">
+
+  <div class="w-100">
+    <img width="50" src="/assets/images/cr_logo_mark_white.svg">
+  </div>
+
+  <div class="w-100 flex flex-column flex-row-ns items-stretch-ns content-stretch-ns mt5">
+
+    <div class="flex-1 order-3-ns mb4">
+      <h2 class="f5 mied mb4 black">111111111111</h2>
+      <ul class="ma0 pa0 list">
+        <li class="mb3"><a href="/shop">SHOP</a></li>
+        <li class="mb3"><a href="/info">INFO</a></li>
+      </ul>
+    </div>
+
+    <div class="flex-1 order-1-ns mb4">
+      <h2 class="f5 mied mb4">RELEASES</h2>
+      <ul class="ma0 pa0 list">
+        {% for release in site.data.releases %}
+          <li class="mb3">
+            <a href="{{ release.url }}">{{ release.name }} </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+
+    <div class="flex-1 order-2-ns mb4">
+
+      <h2 class="f5 mied mb4">RADIO</h2>
+      <ul class="ma0 pa0 list">
+        {% for item in site.data.radioShows %}
+          <li class="mb3">
+            <a href="{{ item.url }}">{{ item.name }} </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+
+  </div>
+
+</div>

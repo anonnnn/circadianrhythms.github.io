@@ -1,0 +1,21 @@
+.archive {
+  font-family: 'Input';
+  background: #000;
+  color: #fff;
+}
+
+.archive.day {
+  background: #fff;
+  color: #000;
+}
+
+.archive a {
+  color: #fff;
+
+  text-decoration: none;
+}
+
+.archive ul a:hover {
+  background: #fff;
+  color: #000;
+}

@@ -19,3 +19,22 @@
   src: url('../fonts/UniversLTStd-Cn.woff') format('woff'),
   url('../fonts/UniversLTStd-Cn.svg#UniversLTStd-Cn') format('svg');
 }
+
+
+@font-face {
+  font-family: 'Miedinger';
+  src: url('../fonts/Miedi.eot');
+  src: url('../fonts/Miedi.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Miedi.woff2') format('woff2'),
+  url('../fonts/Miedi.woff') format('woff'),
+  url('../fonts/Miedi.svg#webfont') format('svg');
+}
+
+@font-face {
+  font-family: 'Input';
+  src: url('../fonts/InputMono-Regular.eot');
+  src: url('../fonts/InputMono-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/InputMono-Regular.woff2') format('woff2'),
+  url('../fonts/InputMono-Regular.woff') format('woff'),
+  url('../fonts/InputMono-Regular.svg#webfont') format('svg');
+}
